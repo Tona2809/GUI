@@ -82,8 +82,9 @@ namespace MovieTheater
             // 
             // LoginBT
             // 
-            this.LoginBT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.LoginBT.BackColor = System.Drawing.Color.Maroon;
             this.LoginBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginBT.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.LoginBT.Location = new System.Drawing.Point(59, 150);
             this.LoginBT.Name = "LoginBT";
             this.LoginBT.Size = new System.Drawing.Size(638, 50);
@@ -99,6 +100,7 @@ namespace MovieTheater
             this.ConnectBT.TabIndex = 8;
             this.ConnectBT.Text = "Connect";
             this.ConnectBT.UseVisualStyleBackColor = true;
+            this.ConnectBT.Click += new System.EventHandler(this.ConnectBT_Click);
             // 
             // label1
             // 

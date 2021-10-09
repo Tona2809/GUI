@@ -16,5 +16,11 @@ namespace MovieTheater
         {
             InitializeComponent();
         }
+
+        private void ConnectBT_Click(object sender, EventArgs e)
+        {
+            ConnectDB formConnection = new ConnectDB();
+            formConnection.ShowDialog();
+        }
     }
 }

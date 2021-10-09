@@ -25,5 +25,94 @@ namespace MovieTheater.Properties
                 return defaultInstance;
             }
         }
+
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DataSource
+        {
+            get
+            {
+                return ((string)(this["DataSource"]));
+            }
+            set
+            {
+                this["DataSource"] = value;
+            }
+        }
+
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string InitialCatalog
+        {
+            get
+            {
+                return ((string)(this["InitialCatalog"]));
+            }
+            set
+            {
+                this["InitialCatalog"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string UserID
+        {
+            get
+            {
+                return ((string)(this["UserID"]));
+            }
+            set
+            {
+                this["UserID"] = value;
+            }
+        }
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-T093R9G/SQLEXPRESS;Initial Catalog=QLRP;Integrated Security=True")]
+        public string QLRPConnectionString
+        {
+            get
+            {
+                return ((string)(this["QLRPConnectionString"]));
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pass
+        {
+            get
+            {
+                return ((string)(this["pass"]));
+            }
+            set
+            {
+                this["pass"] = value;
+            }
+        }
+
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string connectionSTR
+        {
+            get
+            {
+                return ((string)(this["connectionSTR"]));
+            }
+            set
+            {
+                this["connectionSTR"] = value;
+            }
+        }
     }
 }

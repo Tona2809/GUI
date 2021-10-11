@@ -52,6 +52,7 @@
     <Compile Include="ConnectDB.Designer.cs">
       <DependentUpon>ConnectDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAO\AccountDB.cs" />
     <Compile Include="DAO\myDB.cs" />
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>

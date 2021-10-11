@@ -38,6 +38,7 @@ namespace MovieTheater
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -91,6 +92,7 @@ namespace MovieTheater
             this.LoginBT.TabIndex = 6;
             this.LoginBT.Text = "ĐĂNG NHẬP";
             this.LoginBT.UseVisualStyleBackColor = false;
+            this.LoginBT.Click += new System.EventHandler(this.LoginBT_Click);
             // 
             // ConnectBT
             // 
@@ -136,6 +138,17 @@ namespace MovieTheater
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(527, 375);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(212, 17);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Design By: Nhóm 6- ST6- DBMS";
+            // 
             // formLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -144,6 +157,7 @@ namespace MovieTheater
             this.BackgroundImage = global::MovieTheater.Properties.Resources.cinema_4398725_1280;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(751, 401);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -155,6 +169,7 @@ namespace MovieTheater
             this.Controls.Add(this.LoginBT);
             this.Name = "formLogin";
             this.Text = "Đăng nhập";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formLogin_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -172,6 +187,7 @@ namespace MovieTheater
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label2;
     }
 }
 

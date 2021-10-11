@@ -15,7 +15,29 @@ namespace MovieTheater.DAO
         {
 
         }
+        SqlConnection con = new SqlConnection(@"Data Source=(localdb)\ProjectsV13;Initial Catalog=DB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         private static string connectionSTR = Properties.Settings.Default.connectionSTR;
+        public SqlConnection GetConnection
+        {
+            get
+            {
+                return con;
+            }
+        }
+        public void openConnection()
+        {
+            if ((con.State == ConnectionState.Closed))
+            {
+                con.Open();
+            }
+        }
+        public void closeConnection()
+        {
+            if ((con.State == ConnectionState.Open))
+            {
+                con.Close();
+            }
+        }
         public static bool connectiontest(string conn)
         {
             bool result = false;

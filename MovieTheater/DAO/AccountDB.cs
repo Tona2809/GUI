@@ -19,14 +19,14 @@ namespace MovieTheater.DAO
             }
             else
             {
-                if(table.Rows.Count>0)
+                if (table.Rows.Count > 0)
                 {
                     return 1;
-                }    
+                }
                 else
                 {
                     return 0;
-                }    
+                }
             }
         }
     }

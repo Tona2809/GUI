@@ -46,27 +46,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConnectDB.cs">
+    <Compile Include="Movie.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConnectDB.Designer.cs">
+    <Compile Include="Movie.Designer.cs">
+      <DependentUpon>Movie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConnectDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ConnectDB.Designer.cs">
       <DependentUpon>ConnectDB.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\AccountDB.cs" />
     <Compile Include="DAO\myDB.cs" />
-    <Compile Include="FormLogin.cs">
+    <Compile Include="Views\DashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.Designer.cs">
+    <Compile Include="Views\DashboardForm.Designer.cs">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Account.cs" />
+    <Compile Include="Views\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ConnectDB.resx">
+    <EmbeddedResource Include="Movie.resx">
+      <DependentUpon>Movie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ConnectDB.resx">
       <DependentUpon>ConnectDB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
+    <EmbeddedResource Include="Views\DashboardForm.resx">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -103,8 +131,6 @@
   <ItemGroup>
     <None Include="resourses\cinema-4398725_1280.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DTO\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

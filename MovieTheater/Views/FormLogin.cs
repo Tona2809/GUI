@@ -32,6 +32,10 @@ namespace MovieTheater
             if(check == 1)
             {
                 MessageBox.Show("Đăng nhập thành công!!!!", "THÔNG BÁO");
+
+                MainForm fml = new MainForm();
+                fml.Show();
+
             }
             else if(check ==0)
             {

@@ -20,7 +20,7 @@ namespace MovieTheater
         private void phimBT_Click(object sender, EventArgs e)
         {
             pnmain.Controls.Clear();
-            Movie dbf = new Movie();
+            MovieForm dbf = new Movie();
             dbf.TopLevel = false;
             pnmain.Controls.Add(dbf);
             dbf.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

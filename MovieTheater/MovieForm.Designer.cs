@@ -1,7 +1,7 @@
 ﻿
 namespace MovieTheater
 {
-    partial class Movie
+    partial class MovieForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,11 +31,11 @@ namespace MovieTheater
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtvMovie = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.moviePIC = new System.Windows.Forms.PictureBox();
             this.UploadBT = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,28 +46,28 @@ namespace MovieTheater
             this.clbmovie = new System.Windows.Forms.CheckedListBox();
             this.label7 = new System.Windows.Forms.Label();
             this.sanxuatTB = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.daoDienTB = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.moTaTB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.thoiluongTB = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dtpkc = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.dtpkt = new System.Windows.Forms.DateTimePicker();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.namSXTB = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.xemBT = new System.Windows.Forms.Button();
             this.editBT = new System.Windows.Forms.Button();
             this.XoaBT = new System.Windows.Forms.Button();
             this.addBT = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtvMovie)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moviePIC)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -88,16 +88,16 @@ namespace MovieTheater
             this.panel5.Size = new System.Drawing.Size(312, 319);
             this.panel5.TabIndex = 0;
             // 
-            // dataGridView1
+            // dtvMovie
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 360);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1246, 277);
-            this.dataGridView1.TabIndex = 1;
+            this.dtvMovie.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtvMovie.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dtvMovie.Location = new System.Drawing.Point(0, 360);
+            this.dtvMovie.Name = "dtvMovie";
+            this.dtvMovie.RowHeadersWidth = 51;
+            this.dtvMovie.RowTemplate.Height = 24;
+            this.dtvMovie.Size = new System.Drawing.Size(1246, 277);
+            this.dtvMovie.TabIndex = 1;
             // 
             // panel2
             // 
@@ -119,7 +119,7 @@ namespace MovieTheater
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.label10);
-            this.panel6.Controls.Add(this.pictureBox1);
+            this.panel6.Controls.Add(this.moviePIC);
             this.panel6.Controls.Add(this.UploadBT);
             this.panel6.Location = new System.Drawing.Point(955, 9);
             this.panel6.Name = "panel6";
@@ -136,14 +136,14 @@ namespace MovieTheater
             this.label10.TabIndex = 21;
             this.label10.Text = "Áp phích";
             // 
-            // pictureBox1
+            // moviePIC
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(38, 35);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(210, 246);
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
+            this.moviePIC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.moviePIC.Location = new System.Drawing.Point(38, 35);
+            this.moviePIC.Name = "moviePIC";
+            this.moviePIC.Size = new System.Drawing.Size(210, 246);
+            this.moviePIC.TabIndex = 20;
+            this.moviePIC.TabStop = false;
             // 
             // UploadBT
             // 
@@ -167,18 +167,18 @@ namespace MovieTheater
             this.panel4.Controls.Add(this.clbmovie);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.sanxuatTB);
-            this.panel4.Controls.Add(this.textBox3);
+            this.panel4.Controls.Add(this.daoDienTB);
             this.panel4.Controls.Add(this.label8);
-            this.panel4.Location = new System.Drawing.Point(10, 3);
+            this.panel4.Location = new System.Drawing.Point(10, 9);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(415, 292);
+            this.panel4.Size = new System.Drawing.Size(415, 286);
             this.panel4.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 11);
+            this.label1.Location = new System.Drawing.Point(22, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 25);
             this.label1.TabIndex = 1;
@@ -186,11 +186,12 @@ namespace MovieTheater
             // 
             // MaphimTB
             // 
-            this.MaphimTB.Location = new System.Drawing.Point(118, 6);
+            this.MaphimTB.Location = new System.Drawing.Point(118, 10);
             this.MaphimTB.Multiline = true;
             this.MaphimTB.Name = "MaphimTB";
             this.MaphimTB.Size = new System.Drawing.Size(283, 30);
             this.MaphimTB.TabIndex = 0;
+            this.MaphimTB.TextChanged += new System.EventHandler(this.MaphimTB_TextChanged);
             // 
             // label2
             // 
@@ -214,7 +215,7 @@ namespace MovieTheater
             // 
             this.theloaiLB.AutoSize = true;
             this.theloaiLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.theloaiLB.Location = new System.Drawing.Point(17, 106);
+            this.theloaiLB.Location = new System.Drawing.Point(22, 100);
             this.theloaiLB.Name = "theloaiLB";
             this.theloaiLB.Size = new System.Drawing.Size(88, 25);
             this.theloaiLB.TabIndex = 4;
@@ -223,7 +224,7 @@ namespace MovieTheater
             // clbmovie
             // 
             this.clbmovie.FormattingEnabled = true;
-            this.clbmovie.Location = new System.Drawing.Point(118, 106);
+            this.clbmovie.Location = new System.Drawing.Point(118, 101);
             this.clbmovie.Name = "clbmovie";
             this.clbmovie.Size = new System.Drawing.Size(283, 72);
             this.clbmovie.TabIndex = 5;
@@ -232,7 +233,7 @@ namespace MovieTheater
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(17, 207);
+            this.label7.Location = new System.Drawing.Point(22, 196);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(96, 25);
             this.label7.TabIndex = 14;
@@ -240,25 +241,25 @@ namespace MovieTheater
             // 
             // sanxuatTB
             // 
-            this.sanxuatTB.Location = new System.Drawing.Point(118, 202);
+            this.sanxuatTB.Location = new System.Drawing.Point(118, 196);
             this.sanxuatTB.Multiline = true;
             this.sanxuatTB.Name = "sanxuatTB";
             this.sanxuatTB.Size = new System.Drawing.Size(283, 30);
             this.sanxuatTB.TabIndex = 15;
             // 
-            // textBox3
+            // daoDienTB
             // 
-            this.textBox3.Location = new System.Drawing.Point(118, 248);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(283, 30);
-            this.textBox3.TabIndex = 17;
+            this.daoDienTB.Location = new System.Drawing.Point(119, 242);
+            this.daoDienTB.Multiline = true;
+            this.daoDienTB.Name = "daoDienTB";
+            this.daoDienTB.Size = new System.Drawing.Size(283, 30);
+            this.daoDienTB.TabIndex = 17;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(17, 252);
+            this.label8.Location = new System.Drawing.Point(22, 242);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(96, 25);
             this.label8.TabIndex = 16;
@@ -268,14 +269,14 @@ namespace MovieTheater
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.moTaTB);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.thoiluongTB);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.dtpkc);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.dtpkt);
-            this.panel3.Controls.Add(this.textBox4);
+            this.panel3.Controls.Add(this.namSXTB);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Location = new System.Drawing.Point(431, 9);
             this.panel3.Name = "panel3";
@@ -286,19 +287,19 @@ namespace MovieTheater
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 8);
+            this.label3.Location = new System.Drawing.Point(28, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 25);
             this.label3.TabIndex = 6;
             this.label3.Text = "Mô tả:";
             // 
-            // textBox1
+            // moTaTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(101, 6);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(368, 76);
-            this.textBox1.TabIndex = 7;
+            this.moTaTB.Location = new System.Drawing.Point(101, 6);
+            this.moTaTB.Multiline = true;
+            this.moTaTB.Name = "moTaTB";
+            this.moTaTB.Size = new System.Drawing.Size(368, 76);
+            this.moTaTB.TabIndex = 7;
             // 
             // label4
             // 
@@ -310,13 +311,13 @@ namespace MovieTheater
             this.label4.TabIndex = 8;
             this.label4.Text = "Thời lượng:";
             // 
-            // textBox2
+            // thoiluongTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(191, 241);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(278, 30);
-            this.textBox2.TabIndex = 9;
+            this.thoiluongTB.Location = new System.Drawing.Point(191, 241);
+            this.thoiluongTB.Multiline = true;
+            this.thoiluongTB.Name = "thoiluongTB";
+            this.thoiluongTB.Size = new System.Drawing.Size(278, 30);
+            this.thoiluongTB.TabIndex = 9;
             // 
             // label5
             // 
@@ -354,13 +355,13 @@ namespace MovieTheater
             this.dtpkt.Size = new System.Drawing.Size(278, 22);
             this.dtpkt.TabIndex = 13;
             // 
-            // textBox4
+            // namSXTB
             // 
-            this.textBox4.Location = new System.Drawing.Point(191, 196);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(278, 30);
-            this.textBox4.TabIndex = 19;
+            this.namSXTB.Location = new System.Drawing.Point(191, 196);
+            this.namSXTB.Multiline = true;
+            this.namSXTB.Name = "namSXTB";
+            this.namSXTB.Size = new System.Drawing.Size(278, 30);
+            this.namSXTB.TabIndex = 19;
             // 
             // label9
             // 
@@ -393,6 +394,7 @@ namespace MovieTheater
             this.editBT.TabIndex = 25;
             this.editBT.Text = "EDIT";
             this.editBT.UseVisualStyleBackColor = false;
+            this.editBT.Click += new System.EventHandler(this.editBT_Click);
             // 
             // XoaBT
             // 
@@ -404,6 +406,7 @@ namespace MovieTheater
             this.XoaBT.TabIndex = 24;
             this.XoaBT.Text = "DELETE";
             this.XoaBT.UseVisualStyleBackColor = false;
+            this.XoaBT.Click += new System.EventHandler(this.XoaBT_Click);
             // 
             // addBT
             // 
@@ -415,24 +418,25 @@ namespace MovieTheater
             this.addBT.TabIndex = 23;
             this.addBT.Text = "ADD";
             this.addBT.UseVisualStyleBackColor = false;
+            this.addBT.Click += new System.EventHandler(this.addBT_Click);
             // 
-            // Movie
+            // MovieForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1246, 637);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtvMovie);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Movie";
+            this.Name = "MovieForm";
             this.Text = "Movie";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtvMovie)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moviePIC)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -444,13 +448,13 @@ namespace MovieTheater
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtvMovie;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox MaphimTB;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox thoiluongTB;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox moTaTB;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckedListBox clbmovie;
         private System.Windows.Forms.Label theloaiLB;
@@ -466,12 +470,12 @@ namespace MovieTheater
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox moviePIC;
         private System.Windows.Forms.Button UploadBT;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox daoDienTB;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox namSXTB;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button xemBT;
         private System.Windows.Forms.Button editBT;

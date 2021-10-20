@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Movie.cs">
+    <Compile Include="DAO\GenreDB.cs" />
+    <Compile Include="DAO\MovieByGenreDB.cs" />
+    <Compile Include="DAO\MovieDB.cs" />
+    <Compile Include="Model\Genre.cs" />
+    <Compile Include="Model\Movie.cs" />
+    <Compile Include="Model\MovieByGenre.cs" />
+    <Compile Include="MovieForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Movie.Designer.cs">
-      <DependentUpon>Movie.cs</DependentUpon>
+    <Compile Include="MovieForm.Designer.cs">
+      <DependentUpon>MovieForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ConnectDB.cs">
       <SubType>Form</SubType>
@@ -81,8 +87,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Movie.resx">
-      <DependentUpon>Movie.cs</DependentUpon>
+    <EmbeddedResource Include="MovieForm.resx">
+      <DependentUpon>MovieForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ConnectDB.resx">
       <DependentUpon>ConnectDB.cs</DependentUpon>
@@ -131,6 +137,8 @@
   <ItemGroup>
     <None Include="resourses\cinema-4398725_1280.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Controller\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

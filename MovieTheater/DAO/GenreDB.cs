@@ -10,13 +10,13 @@ namespace MovieTheater.DAO
 {
     class GenreDB
     {
-        public static List<Genre> GetListGenre()
+        public static List<GenreForm> GetListGenre()
         {
-            List<Genre> genreList = new List<Genre>();
-            DataTable table = myDB.ExecuteQuery("SELECT * FROM dbo.theLoai");
+            List<GenreForm> genreList = new List<GenreForm>();
+            DataTable table = myDB.ExecuteQuery("SELECT * FROM dbo.TheLoai");
             foreach (DataRow item in table.Rows)
             {
-                Genre genre = new Genre(item);
+                GenreForm genre = new Genre(item);
                 genreList.Add(genre);
             }
             return genreList;

@@ -14,7 +14,6 @@ namespace MovieTheater
 {
     public partial class MovieForm : Form
     {
-        myDB mydb;
         BindingSource movieList = new BindingSource();
         public MovieForm()
         {
@@ -163,6 +162,32 @@ namespace MovieTheater
             {
                 MessageBox.Show("Edit phim thất bại");
             }    
+        }
+
+        private void xemBT_Click(object sender, EventArgs e)
+        {
+            loadpage();
+        }
+
+        private void UploadBT_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string filePathImage = null;
+                OpenFileDialog openFile = new OpenFileDialog();
+                openFile.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
+                openFile.FilterIndex = 1;
+                openFile.RestoreDirectory = true;
+                if (openFile.ShowDialog() == DialogResult.OK)
+                {
+                    filePathImage = openFile.FileName;
+                    moviePIC.Image = Image.FromFile(filePathImage.ToString());
+                }
+            }
+            catch (Exception)
+            {
+                return;
+            }
         }
     }
 }

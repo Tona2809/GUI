@@ -20,12 +20,22 @@ namespace MovieTheater
         private void phimBT_Click(object sender, EventArgs e)
         {
             pnmain.Controls.Clear();
-            MovieForm dbf = new Movie();
+            MovieForm dbf = new MovieForm();
             dbf.TopLevel = false;
             pnmain.Controls.Add(dbf);
             dbf.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             dbf.Dock = DockStyle.Fill;
             dbf.Show();
+        }
+
+        private void theloaiBT_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MovieTheater.Model;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
@@ -32,9 +33,9 @@ namespace MovieTheater.DAO
         }
         public static Movie GetMovieByID(string id)
         {
-            MovieForm movie = null;
+            Movie movie = null;
             DataTable table = myDB.ExecuteQuery("SELECT * FROM dbo.Phim WHERE iD= '" + id + "'");
-            foreach(DataTable item in table.Rows)
+            foreach(DataRow item in table.Rows)
             {
                 movie = new Movie(item);
                 return movie;
@@ -45,5 +46,18 @@ namespace MovieTheater.DAO
         {
             return myDB.ExecuteQuery("EXEC GetMovie");
         }
+        public static bool DeleleMovie(string id)
+        {
+            myDB.ExecuteNonQuery("DELETE dbo.phanLoaiphim WHERE idPhim= '" + id + "'");
+            myDB.ExecuteNonQuery("DELETE dbo.dinhDangphim WHERE idPhim= '" + id + "'");
+            MovieByGenreDB.DeleteGenrebyMovieID(id);
+            int result = myDB.ExecuteNonQuery("DELETE dbo.Phim WHERE Id = '" + id + "'");
+            return result > 0;
+        }  
+        public static bool UpdateMovie(string id, string name, string desc, float length, DateTime startDate, DateTime endDate, string productor, string director, int year, byte[] image)
+        {
+            int result = myDB.ExecuteNonQuery("EXEC UpdateMovie @iD, @tenPhim, @moTa, @thoiLuong, @ngayKhoichieu, @ngayKetthuc, @sanXuat, @daoDien, @namSX, @apPhich", new object[] { id, name, desc, length, startDate, endDate, productor, director, year, image });
+            return result > 0;
+        }    
     }
 }

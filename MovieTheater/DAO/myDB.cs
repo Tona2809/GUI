@@ -24,12 +24,12 @@ namespace MovieTheater.DAO
                 return con;
             }
         }
-        public void openConnection()
+        public bool openConnection()
         {
             if ((con.State == ConnectionState.Closed))
-            {
+            
                 con.Open();
-            }
+            return true;
         }
         public void closeConnection()
         {

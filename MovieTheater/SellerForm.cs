@@ -10,9 +10,14 @@ using System.Windows.Forms;
 
 namespace MovieTheater
 {
-    public partial class DashboardForm : Form
+    public partial class SellerForm : Form
     {
-        private void pnmain_Paint(object sender, PaintEventArgs e)
+        public SellerForm()
+        {
+            InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

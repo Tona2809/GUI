@@ -155,7 +155,6 @@ namespace MovieTheater
             this.UploadBT.TabIndex = 22;
             this.UploadBT.Text = "Upload";
             this.UploadBT.UseVisualStyleBackColor = false;
-            this.UploadBT.Click += new System.EventHandler(this.UploadBT_Click);
             // 
             // panel4
             // 
@@ -192,7 +191,6 @@ namespace MovieTheater
             this.MaphimTB.Name = "MaphimTB";
             this.MaphimTB.Size = new System.Drawing.Size(283, 30);
             this.MaphimTB.TabIndex = 0;
-            this.MaphimTB.TextChanged += new System.EventHandler(this.MaphimTB_TextChanged);
             // 
             // label2
             // 
@@ -384,7 +382,6 @@ namespace MovieTheater
             this.xemBT.TabIndex = 26;
             this.xemBT.Text = "WATCH";
             this.xemBT.UseVisualStyleBackColor = false;
-            this.xemBT.Click += new System.EventHandler(this.xemBT_Click);
             // 
             // editBT
             // 
@@ -396,7 +393,6 @@ namespace MovieTheater
             this.editBT.TabIndex = 25;
             this.editBT.Text = "EDIT";
             this.editBT.UseVisualStyleBackColor = false;
-            this.editBT.Click += new System.EventHandler(this.editBT_Click);
             // 
             // XoaBT
             // 
@@ -408,7 +404,6 @@ namespace MovieTheater
             this.XoaBT.TabIndex = 24;
             this.XoaBT.Text = "DELETE";
             this.XoaBT.UseVisualStyleBackColor = false;
-            this.XoaBT.Click += new System.EventHandler(this.XoaBT_Click);
             // 
             // addBT
             // 
@@ -420,7 +415,6 @@ namespace MovieTheater
             this.addBT.TabIndex = 23;
             this.addBT.Text = "ADD";
             this.addBT.UseVisualStyleBackColor = false;
-            this.addBT.Click += new System.EventHandler(this.addBT_Click);
             // 
             // MovieForm
             // 

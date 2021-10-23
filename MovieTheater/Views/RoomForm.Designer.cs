@@ -1,7 +1,7 @@
 ﻿
 namespace MovieTheater
 {
-    partial class Room
+    partial class RoomForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,33 +30,33 @@ namespace MovieTheater
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.MaphongTB = new System.Windows.Forms.TextBox();
-            this.tenphongTB = new System.Windows.Forms.TextBox();
-            this.mamanhinhTB = new System.Windows.Forms.TextBox();
+            this.showBT = new System.Windows.Forms.Button();
+            this.EditBT = new System.Windows.Forms.Button();
+            this.DelBT = new System.Windows.Forms.Button();
+            this.AddBT = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.ghemoihangTB = new System.Windows.Forms.TextBox();
+            this.sohanggheTB = new System.Windows.Forms.TextBox();
+            this.tinhtrangTB = new System.Windows.Forms.TextBox();
+            this.sochongoiTB = new System.Windows.Forms.TextBox();
             this.tenmanhinhTB = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.mamanhinhTB = new System.Windows.Forms.TextBox();
+            this.tenphongTB = new System.Windows.Forms.TextBox();
+            this.MaphongTB = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,23 +69,61 @@ namespace MovieTheater
             this.panel1.Size = new System.Drawing.Size(423, 631);
             this.panel1.TabIndex = 0;
             // 
-            // dataGridView1
+            // panel3
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(433, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(809, 631);
-            this.dataGridView1.TabIndex = 1;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.showBT);
+            this.panel3.Controls.Add(this.EditBT);
+            this.panel3.Controls.Add(this.DelBT);
+            this.panel3.Controls.Add(this.AddBT);
+            this.panel3.Location = new System.Drawing.Point(4, 462);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(414, 159);
+            this.panel3.TabIndex = 1;
+            // 
+            // showBT
+            // 
+            this.showBT.Location = new System.Drawing.Point(235, 83);
+            this.showBT.Name = "showBT";
+            this.showBT.Size = new System.Drawing.Size(157, 46);
+            this.showBT.TabIndex = 3;
+            this.showBT.Text = "Show";
+            this.showBT.UseVisualStyleBackColor = true;
+            // 
+            // EditBT
+            // 
+            this.EditBT.Location = new System.Drawing.Point(13, 83);
+            this.EditBT.Name = "EditBT";
+            this.EditBT.Size = new System.Drawing.Size(157, 46);
+            this.EditBT.TabIndex = 2;
+            this.EditBT.Text = "Sửa";
+            this.EditBT.UseVisualStyleBackColor = true;
+            // 
+            // DelBT
+            // 
+            this.DelBT.Location = new System.Drawing.Point(235, 20);
+            this.DelBT.Name = "DelBT";
+            this.DelBT.Size = new System.Drawing.Size(157, 46);
+            this.DelBT.TabIndex = 1;
+            this.DelBT.Text = "Xóa";
+            this.DelBT.UseVisualStyleBackColor = true;
+            // 
+            // AddBT
+            // 
+            this.AddBT.Location = new System.Drawing.Point(13, 20);
+            this.AddBT.Name = "AddBT";
+            this.AddBT.Size = new System.Drawing.Size(157, 46);
+            this.AddBT.TabIndex = 0;
+            this.AddBT.Text = "Thêm";
+            this.AddBT.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.textBox8);
-            this.panel2.Controls.Add(this.textBox7);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.ghemoihangTB);
+            this.panel2.Controls.Add(this.sohanggheTB);
+            this.panel2.Controls.Add(this.tinhtrangTB);
+            this.panel2.Controls.Add(this.sochongoiTB);
             this.panel2.Controls.Add(this.tenmanhinhTB);
             this.panel2.Controls.Add(this.mamanhinhTB);
             this.panel2.Controls.Add(this.tenphongTB);
@@ -103,87 +141,69 @@ namespace MovieTheater
             this.panel2.Size = new System.Drawing.Size(414, 453);
             this.panel2.TabIndex = 0;
             // 
-            // panel3
+            // ghemoihangTB
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Location = new System.Drawing.Point(4, 462);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(414, 159);
-            this.panel3.TabIndex = 1;
+            this.ghemoihangTB.Location = new System.Drawing.Point(142, 402);
+            this.ghemoihangTB.Multiline = true;
+            this.ghemoihangTB.Name = "ghemoihangTB";
+            this.ghemoihangTB.Size = new System.Drawing.Size(265, 33);
+            this.ghemoihangTB.TabIndex = 15;
             // 
-            // label1
+            // sohanggheTB
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mã phòng:";
+            this.sohanggheTB.Location = new System.Drawing.Point(142, 341);
+            this.sohanggheTB.Multiline = true;
+            this.sohanggheTB.Name = "sohanggheTB";
+            this.sohanggheTB.Size = new System.Drawing.Size(265, 33);
+            this.sohanggheTB.TabIndex = 14;
             // 
-            // label2
+            // tinhtrangTB
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 69);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 24);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Tên phòng:";
+            this.tinhtrangTB.Location = new System.Drawing.Point(142, 278);
+            this.tinhtrangTB.Multiline = true;
+            this.tinhtrangTB.Name = "tinhtrangTB";
+            this.tinhtrangTB.Size = new System.Drawing.Size(265, 33);
+            this.tinhtrangTB.TabIndex = 13;
             // 
-            // label3
+            // sochongoiTB
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 123);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 24);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Mã màn hình:";
+            this.sochongoiTB.Location = new System.Drawing.Point(142, 222);
+            this.sochongoiTB.Multiline = true;
+            this.sochongoiTB.Name = "sochongoiTB";
+            this.sochongoiTB.Size = new System.Drawing.Size(265, 33);
+            this.sochongoiTB.TabIndex = 12;
             // 
-            // label4
+            // tenmanhinhTB
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 175);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 24);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Tên màn hình:";
+            this.tenmanhinhTB.Location = new System.Drawing.Point(142, 166);
+            this.tenmanhinhTB.Multiline = true;
+            this.tenmanhinhTB.Name = "tenmanhinhTB";
+            this.tenmanhinhTB.Size = new System.Drawing.Size(265, 33);
+            this.tenmanhinhTB.TabIndex = 11;
             // 
-            // label5
+            // mamanhinhTB
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(8, 231);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 24);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Số chỗ ngồi:";
+            this.mamanhinhTB.Location = new System.Drawing.Point(142, 114);
+            this.mamanhinhTB.Multiline = true;
+            this.mamanhinhTB.Name = "mamanhinhTB";
+            this.mamanhinhTB.Size = new System.Drawing.Size(265, 33);
+            this.mamanhinhTB.TabIndex = 10;
             // 
-            // label6
+            // tenphongTB
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(8, 287);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 24);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Tình trạng:";
+            this.tenphongTB.Location = new System.Drawing.Point(142, 60);
+            this.tenphongTB.Multiline = true;
+            this.tenphongTB.Name = "tenphongTB";
+            this.tenphongTB.Size = new System.Drawing.Size(265, 33);
+            this.tenphongTB.TabIndex = 9;
             // 
-            // label7
+            // MaphongTB
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(9, 350);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(124, 24);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Số hàng ghế:";
+            this.MaphongTB.Location = new System.Drawing.Point(144, 6);
+            this.MaphongTB.Multiline = true;
+            this.MaphongTB.Name = "MaphongTB";
+            this.MaphongTB.Size = new System.Drawing.Size(265, 33);
+            this.MaphongTB.TabIndex = 8;
             // 
             // label8
             // 
@@ -195,107 +215,87 @@ namespace MovieTheater
             this.label8.TabIndex = 7;
             this.label8.Text = "Ghế mỗi hàng:";
             // 
-            // MaphongTB
+            // label7
             // 
-            this.MaphongTB.Location = new System.Drawing.Point(144, 6);
-            this.MaphongTB.Multiline = true;
-            this.MaphongTB.Name = "MaphongTB";
-            this.MaphongTB.Size = new System.Drawing.Size(265, 33);
-            this.MaphongTB.TabIndex = 8;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(9, 350);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(124, 24);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Số hàng ghế:";
             // 
-            // tenphongTB
+            // label6
             // 
-            this.tenphongTB.Location = new System.Drawing.Point(142, 60);
-            this.tenphongTB.Multiline = true;
-            this.tenphongTB.Name = "tenphongTB";
-            this.tenphongTB.Size = new System.Drawing.Size(265, 33);
-            this.tenphongTB.TabIndex = 9;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(8, 287);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 24);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Tình trạng:";
             // 
-            // mamanhinhTB
+            // label5
             // 
-            this.mamanhinhTB.Location = new System.Drawing.Point(142, 114);
-            this.mamanhinhTB.Multiline = true;
-            this.mamanhinhTB.Name = "mamanhinhTB";
-            this.mamanhinhTB.Size = new System.Drawing.Size(265, 33);
-            this.mamanhinhTB.TabIndex = 10;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(8, 231);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(117, 24);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Số chỗ ngồi:";
             // 
-            // tenmanhinhTB
+            // label4
             // 
-            this.tenmanhinhTB.Location = new System.Drawing.Point(142, 166);
-            this.tenmanhinhTB.Multiline = true;
-            this.tenmanhinhTB.Name = "tenmanhinhTB";
-            this.tenmanhinhTB.Size = new System.Drawing.Size(265, 33);
-            this.tenmanhinhTB.TabIndex = 11;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 175);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(133, 24);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Tên màn hình:";
             // 
-            // textBox5
+            // label3
             // 
-            this.textBox5.Location = new System.Drawing.Point(142, 222);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(265, 33);
-            this.textBox5.TabIndex = 12;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 123);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(125, 24);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Mã màn hình:";
             // 
-            // textBox6
+            // label2
             // 
-            this.textBox6.Location = new System.Drawing.Point(142, 278);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(265, 33);
-            this.textBox6.TabIndex = 13;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(8, 69);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(109, 24);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Tên phòng:";
             // 
-            // textBox7
+            // label1
             // 
-            this.textBox7.Location = new System.Drawing.Point(142, 341);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(265, 33);
-            this.textBox7.TabIndex = 14;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mã phòng:";
             // 
-            // textBox8
+            // dataGridView1
             // 
-            this.textBox8.Location = new System.Drawing.Point(142, 402);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(265, 33);
-            this.textBox8.TabIndex = 15;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(433, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(809, 631);
+            this.dataGridView1.TabIndex = 1;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(13, 20);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 46);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(235, 20);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(157, 46);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(13, 83);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(157, 46);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(235, 83);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(157, 46);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // Room
+            // RoomForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -304,13 +304,13 @@ namespace MovieTheater
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Room";
+            this.Name = "RoomForm";
             this.Text = "Room";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -328,14 +328,14 @@ namespace MovieTheater
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button showBT;
+        private System.Windows.Forms.Button EditBT;
+        private System.Windows.Forms.Button DelBT;
+        private System.Windows.Forms.Button AddBT;
+        private System.Windows.Forms.TextBox ghemoihangTB;
+        private System.Windows.Forms.TextBox sohanggheTB;
+        private System.Windows.Forms.TextBox tinhtrangTB;
+        private System.Windows.Forms.TextBox sochongoiTB;
         private System.Windows.Forms.TextBox tenmanhinhTB;
         private System.Windows.Forms.TextBox mamanhinhTB;
         private System.Windows.Forms.TextBox tenphongTB;

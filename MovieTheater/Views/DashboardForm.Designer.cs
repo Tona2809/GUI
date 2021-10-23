@@ -30,13 +30,13 @@ namespace MovieTheater
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.DinhdangBT = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.LichchieuBt = new System.Windows.Forms.Button();
             this.phongchieuBT = new System.Windows.Forms.Button();
             this.theloaiBT = new System.Windows.Forms.Button();
             this.phimBT = new System.Windows.Forms.Button();
             this.pnmain = new System.Windows.Forms.Panel();
-            this.DinhdangBT = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +55,18 @@ namespace MovieTheater
             this.panel1.Size = new System.Drawing.Size(301, 637);
             this.panel1.TabIndex = 0;
             // 
+            // DinhdangBT
+            // 
+            this.DinhdangBT.BackColor = System.Drawing.Color.Teal;
+            this.DinhdangBT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.DinhdangBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DinhdangBT.Location = new System.Drawing.Point(6, 411);
+            this.DinhdangBT.Name = "DinhdangBT";
+            this.DinhdangBT.Size = new System.Drawing.Size(292, 68);
+            this.DinhdangBT.TabIndex = 5;
+            this.DinhdangBT.Text = "Định dạng";
+            this.DinhdangBT.UseVisualStyleBackColor = false;
+            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Teal;
@@ -66,7 +78,6 @@ namespace MovieTheater
             this.button5.TabIndex = 4;
             this.button5.Text = "Vé";
             this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // LichchieuBt
             // 
@@ -103,7 +114,6 @@ namespace MovieTheater
             this.theloaiBT.TabIndex = 1;
             this.theloaiBT.Text = "Thể loại";
             this.theloaiBT.UseVisualStyleBackColor = false;
-            this.theloaiBT.Click += new System.EventHandler(this.theloaiBT_Click);
             // 
             // phimBT
             // 
@@ -116,7 +126,6 @@ namespace MovieTheater
             this.phimBT.TabIndex = 0;
             this.phimBT.Text = "Phim";
             this.phimBT.UseVisualStyleBackColor = false;
-            this.phimBT.Click += new System.EventHandler(this.phimBT_Click);
             // 
             // pnmain
             // 
@@ -125,19 +134,8 @@ namespace MovieTheater
             this.pnmain.Location = new System.Drawing.Point(301, 0);
             this.pnmain.Name = "pnmain";
             this.pnmain.Size = new System.Drawing.Size(1246, 637);
-            this.pnmain.TabIndex = 1;
-            // 
-            // DinhdangBT
-            // 
-            this.DinhdangBT.BackColor = System.Drawing.Color.Teal;
-            this.DinhdangBT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.DinhdangBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DinhdangBT.Location = new System.Drawing.Point(6, 411);
-            this.DinhdangBT.Name = "DinhdangBT";
-            this.DinhdangBT.Size = new System.Drawing.Size(292, 68);
-            this.DinhdangBT.TabIndex = 5;
-            this.DinhdangBT.Text = "Định dạng";
-            this.DinhdangBT.UseVisualStyleBackColor = false;
+            this.pnmain.TabIndex = 0;
+            this.pnmain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnmain_Paint);
             // 
             // DashboardForm
             // 

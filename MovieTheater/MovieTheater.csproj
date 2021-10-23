@@ -49,13 +49,56 @@
     <Compile Include="DAO\GenreDB.cs" />
     <Compile Include="DAO\MovieByGenreDB.cs" />
     <Compile Include="DAO\MovieDB.cs" />
+    <Compile Include="SellerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellerForm.Designer.cs">
+      <DependentUpon>SellerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlConnectionDB.cs" />
+    <Compile Include="Views\StaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\StaffForm.Designer.cs">
+      <DependentUpon>StaffForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketForm.Designer.cs">
+      <DependentUpon>TicketForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormatMovieForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormatMovieForm.Designer.cs">
+      <DependentUpon>FormatMovieForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShowTimeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ShowTimeForm.Designer.cs">
+      <DependentUpon>ShowTimeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RoomForm.Designer.cs">
+      <DependentUpon>RoomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GenreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\GenreForm.Designer.cs">
+      <DependentUpon>GenreForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Genre.cs" />
     <Compile Include="Model\Movie.cs" />
     <Compile Include="Model\MovieByGenre.cs" />
-    <Compile Include="MovieForm.cs">
+    <Compile Include="Views\MovieForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MovieForm.Designer.cs">
+    <Compile Include="Views\MovieForm.Designer.cs">
       <DependentUpon>MovieForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ConnectDB.cs">
@@ -87,7 +130,28 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MovieForm.resx">
+    <EmbeddedResource Include="SellerForm.resx">
+      <DependentUpon>SellerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StaffForm.resx">
+      <DependentUpon>StaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketForm.resx">
+      <DependentUpon>TicketForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormatMovieForm.resx">
+      <DependentUpon>FormatMovieForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ShowTimeForm.resx">
+      <DependentUpon>ShowTimeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RoomForm.resx">
+      <DependentUpon>RoomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GenreForm.resx">
+      <DependentUpon>GenreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MovieForm.resx">
       <DependentUpon>MovieForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ConnectDB.resx">

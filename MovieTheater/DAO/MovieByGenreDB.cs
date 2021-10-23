@@ -24,7 +24,7 @@ namespace MovieTheater.DAO
         }    
         public static List<Genre> GetListGenreByMovie(string id)
         {
-            List<Genre> genreList = new List<GenreForm>();
+            List<Genre> genreList = new List<Genre>();
             DataTable table = myDB.ExecuteQuery("EXEC getListGenreByMovieID @idPhim", new object[] { id });
             foreach(DataRow item in table.Rows)
             {

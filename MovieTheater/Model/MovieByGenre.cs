@@ -19,7 +19,7 @@ namespace MovieTheater.Model
         public MovieByGenre(DataRow row)
         {
             this.MovieID = row["idPhim"].ToString();
-            this.Genre = row["idTheloai"].ToString();
+            this.Genre = row["idTheLoai"].ToString();
         }
     }
 }

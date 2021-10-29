@@ -23,9 +23,9 @@ namespace MovieTheater.DTO
         }
         public Account(DataRow row)
         {
-            this.Username = row["Username"].ToString();
-            this.Password = row["Password"].ToString();
-            this.Type = (int)row["LoaiTK"];
+            this.Username = row["userName"].ToString();
+            this.Password = row["Pass"].ToString();
+            this.Type = (int)row["loaiTK"];
             this.StaffID = row["idNV"].ToString();
         }    
     }

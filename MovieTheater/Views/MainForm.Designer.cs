@@ -41,7 +41,8 @@ namespace MovieTheater
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Teal;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.AccountBT);
             this.panel2.Controls.Add(this.DoanhthuBt);
             this.panel2.Controls.Add(this.TicketBT);
@@ -112,6 +113,7 @@ namespace MovieTheater
             this.DashboardBT.TabIndex = 0;
             this.DashboardBT.Text = "Dashboard";
             this.DashboardBT.UseVisualStyleBackColor = false;
+            this.DashboardBT.Click += new System.EventHandler(this.DashboardBT_Click);
             // 
             // pnMain
             // 
@@ -120,6 +122,7 @@ namespace MovieTheater
             this.pnMain.Name = "pnMain";
             this.pnMain.Size = new System.Drawing.Size(1547, 637);
             this.pnMain.TabIndex = 1;
+            this.pnMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnMain_Paint);
             // 
             // MainForm
             // 

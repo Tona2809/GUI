@@ -40,6 +40,7 @@ namespace MovieTheater
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cbbsqlconnect = new System.Windows.Forms.ComboBox();
+            this.forgetPassBT = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -89,10 +90,11 @@ namespace MovieTheater
             this.LoginBT.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.LoginBT.Location = new System.Drawing.Point(17, 205);
             this.LoginBT.Name = "LoginBT";
-            this.LoginBT.Size = new System.Drawing.Size(652, 50);
+            this.LoginBT.Size = new System.Drawing.Size(305, 50);
             this.LoginBT.TabIndex = 6;
             this.LoginBT.Text = "ĐĂNG NHẬP";
             this.LoginBT.UseVisualStyleBackColor = false;
+            this.LoginBT.Click += new System.EventHandler(this.LoginBT_Click);
             // 
             // label1
             // 
@@ -133,7 +135,7 @@ namespace MovieTheater
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(12, 279);
+            this.label2.Location = new System.Drawing.Point(14, 293);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(212, 17);
             this.label2.TabIndex = 12;
@@ -158,6 +160,18 @@ namespace MovieTheater
             this.cbbsqlconnect.Size = new System.Drawing.Size(307, 24);
             this.cbbsqlconnect.TabIndex = 14;
             // 
+            // forgetPassBT
+            // 
+            this.forgetPassBT.BackColor = System.Drawing.Color.Teal;
+            this.forgetPassBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forgetPassBT.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.forgetPassBT.Location = new System.Drawing.Point(358, 205);
+            this.forgetPassBT.Name = "forgetPassBT";
+            this.forgetPassBT.Size = new System.Drawing.Size(305, 50);
+            this.forgetPassBT.TabIndex = 15;
+            this.forgetPassBT.Text = "Quên mật khẩu";
+            this.forgetPassBT.UseVisualStyleBackColor = false;
+            // 
             // formLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -165,6 +179,7 @@ namespace MovieTheater
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(683, 319);
+            this.Controls.Add(this.forgetPassBT);
             this.Controls.Add(this.cbbsqlconnect);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -178,6 +193,7 @@ namespace MovieTheater
             this.Controls.Add(this.LoginBT);
             this.Name = "formLogin";
             this.Text = "Đăng nhập";
+            this.Load += new System.EventHandler(this.formLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -197,6 +213,7 @@ namespace MovieTheater
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbbsqlconnect;
+        private System.Windows.Forms.Button forgetPassBT;
     }
 }
 

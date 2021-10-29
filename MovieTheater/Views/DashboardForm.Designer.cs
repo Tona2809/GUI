@@ -1,7 +1,7 @@
 ﻿
 namespace MovieTheater
 {
-    partial class DashboardForm
+    partial class DashboardFrm
     {
         /// <summary>
         /// Required designer variable.
@@ -43,6 +43,7 @@ namespace MovieTheater
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.DinhdangBT);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.LichchieuBt);
@@ -52,7 +53,7 @@ namespace MovieTheater
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(301, 637);
+            this.panel1.Size = new System.Drawing.Size(303, 637);
             this.panel1.TabIndex = 0;
             // 
             // DinhdangBT
@@ -114,6 +115,7 @@ namespace MovieTheater
             this.theloaiBT.TabIndex = 1;
             this.theloaiBT.Text = "Thể loại";
             this.theloaiBT.UseVisualStyleBackColor = false;
+            this.theloaiBT.Click += new System.EventHandler(this.theloaiBT_Click);
             // 
             // phimBT
             // 
@@ -126,27 +128,26 @@ namespace MovieTheater
             this.phimBT.TabIndex = 0;
             this.phimBT.Text = "Phim";
             this.phimBT.UseVisualStyleBackColor = false;
+            this.phimBT.Click += new System.EventHandler(this.phimBT_Click);
             // 
             // pnmain
             // 
             this.pnmain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.pnmain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnmain.Location = new System.Drawing.Point(301, 0);
+            this.pnmain.Location = new System.Drawing.Point(302, 0);
             this.pnmain.Name = "pnmain";
             this.pnmain.Size = new System.Drawing.Size(1246, 637);
             this.pnmain.TabIndex = 0;
-            this.pnmain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnmain_Paint);
             // 
-            // DashboardForm
+            // DashboardFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1547, 637);
-            this.Controls.Add(this.pnmain);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnmain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "DashboardForm";
-            this.Text = "DashboardFỏm";
+            this.Name = "DashboardFrm";
+            this.Text = "DashboardForm";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -16,5 +16,20 @@ namespace MovieTheater
         {
             InitializeComponent();
         }
+
+        private void DashboardBT_Click(object sender, EventArgs e)
+        {
+            pnMain.Controls.Clear();
+            DashboardFrm mvf = new DashboardFrm();
+            mvf.TopLevel = false;
+            pnMain.Controls.Add(mvf);
+            mvf.Dock = DockStyle.Fill;
+            mvf.Show();
+        }
+
+        private void pnMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

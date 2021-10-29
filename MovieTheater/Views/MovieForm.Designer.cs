@@ -155,6 +155,7 @@ namespace MovieTheater
             this.UploadBT.TabIndex = 22;
             this.UploadBT.Text = "Upload";
             this.UploadBT.UseVisualStyleBackColor = false;
+            this.UploadBT.Click += new System.EventHandler(this.UploadBT_Click);
             // 
             // panel4
             // 
@@ -178,7 +179,7 @@ namespace MovieTheater
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 10);
+            this.label1.Location = new System.Drawing.Point(17, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 25);
             this.label1.TabIndex = 1;
@@ -196,7 +197,7 @@ namespace MovieTheater
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 57);
+            this.label2.Location = new System.Drawing.Point(12, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 25);
             this.label2.TabIndex = 2;
@@ -214,7 +215,7 @@ namespace MovieTheater
             // 
             this.theloaiLB.AutoSize = true;
             this.theloaiLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.theloaiLB.Location = new System.Drawing.Point(22, 100);
+            this.theloaiLB.Location = new System.Drawing.Point(12, 101);
             this.theloaiLB.Name = "theloaiLB";
             this.theloaiLB.Size = new System.Drawing.Size(88, 25);
             this.theloaiLB.TabIndex = 4;
@@ -227,12 +228,13 @@ namespace MovieTheater
             this.clbmovie.Name = "clbmovie";
             this.clbmovie.Size = new System.Drawing.Size(283, 72);
             this.clbmovie.TabIndex = 5;
+            this.clbmovie.SelectedIndexChanged += new System.EventHandler(this.clbmovie_SelectedIndexChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(22, 196);
+            this.label7.Location = new System.Drawing.Point(12, 196);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(96, 25);
             this.label7.TabIndex = 14;
@@ -258,7 +260,7 @@ namespace MovieTheater
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(22, 242);
+            this.label8.Location = new System.Drawing.Point(12, 242);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(96, 25);
             this.label8.TabIndex = 16;
@@ -286,7 +288,7 @@ namespace MovieTheater
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 10);
+            this.label3.Location = new System.Drawing.Point(18, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 25);
             this.label3.TabIndex = 6;
@@ -304,7 +306,7 @@ namespace MovieTheater
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 247);
+            this.label4.Location = new System.Drawing.Point(18, 247);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 25);
             this.label4.TabIndex = 8;
@@ -322,7 +324,7 @@ namespace MovieTheater
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(28, 101);
+            this.label5.Location = new System.Drawing.Point(18, 101);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(157, 25);
             this.label5.TabIndex = 10;
@@ -340,7 +342,7 @@ namespace MovieTheater
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(28, 156);
+            this.label6.Location = new System.Drawing.Point(18, 153);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(137, 25);
             this.label6.TabIndex = 12;
@@ -366,7 +368,7 @@ namespace MovieTheater
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(28, 201);
+            this.label9.Location = new System.Drawing.Point(18, 201);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(92, 25);
             this.label9.TabIndex = 18;
@@ -380,8 +382,9 @@ namespace MovieTheater
             this.xemBT.Name = "xemBT";
             this.xemBT.Size = new System.Drawing.Size(136, 39);
             this.xemBT.TabIndex = 26;
-            this.xemBT.Text = "WATCH";
+            this.xemBT.Text = "SHOW";
             this.xemBT.UseVisualStyleBackColor = false;
+            this.xemBT.Click += new System.EventHandler(this.xemBT_Click);
             // 
             // editBT
             // 
@@ -393,6 +396,7 @@ namespace MovieTheater
             this.editBT.TabIndex = 25;
             this.editBT.Text = "EDIT";
             this.editBT.UseVisualStyleBackColor = false;
+            this.editBT.Click += new System.EventHandler(this.editBT_Click);
             // 
             // XoaBT
             // 
@@ -404,6 +408,7 @@ namespace MovieTheater
             this.XoaBT.TabIndex = 24;
             this.XoaBT.Text = "DELETE";
             this.XoaBT.UseVisualStyleBackColor = false;
+            this.XoaBT.Click += new System.EventHandler(this.XoaBT_Click);
             // 
             // addBT
             // 
@@ -415,6 +420,7 @@ namespace MovieTheater
             this.addBT.TabIndex = 23;
             this.addBT.Text = "ADD";
             this.addBT.UseVisualStyleBackColor = false;
+            this.addBT.Click += new System.EventHandler(this.addBT_Click);
             // 
             // MovieForm
             // 

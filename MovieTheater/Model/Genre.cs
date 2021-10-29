@@ -21,7 +21,7 @@ namespace MovieTheater.Model
         public Genre(DataRow row)
         {
             this.ID = row["iD"].ToString();
-            this.Name = row["tenTheloai"].ToString();
+            this.Name = row["tenTheLoai"].ToString();
             if (row["moTa"].ToString() != "")
                 this.Desc = row["moTa"].ToString();
             else

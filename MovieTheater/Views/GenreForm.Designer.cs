@@ -1,12 +1,11 @@
 ﻿
 namespace MovieTheater
 {
-    partial class Genre
+    partial class GenreForm
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -178,7 +177,7 @@ namespace MovieTheater
             this.genreDGV.Size = new System.Drawing.Size(766, 631);
             this.genreDGV.TabIndex = 1;
             // 
-            // Genre
+            // GenreForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -187,7 +186,7 @@ namespace MovieTheater
             this.Controls.Add(this.genreDGV);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Genre";
+            this.Name = "GenreForm";
             this.Text = "Genre";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

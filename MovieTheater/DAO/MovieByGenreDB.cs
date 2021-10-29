@@ -1,4 +1,5 @@
-﻿using MovieTheater.Model;
+﻿
+using MovieTheater.Model;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -10,28 +11,26 @@ namespace MovieTheater.DAO
 {
     class MovieByGenreDB
     {
-        public static void InsertMoviebyGenre(string movieID, List<Genre> genreList)
+        public static void InsertMovie_Genre(string movieID,List<Genre> genreList)
         {
-            foreach(Genre items in genreList)
+            foreach(Genre item in genreList)
             {
-                string command = string.Format("INSERT dbo.PhanLoaiPhim (idPhim, idTheLoai) VALUES  ('{0}','{1}')", movieID, items.ID);
-                myDB.ExecuteNonQuery(command);
+                string cmd = string.Format("INSERT dbo.genrebymovie (idPhim, idTheLoai) VALUES ('{0}', '{1}')", movieID, item.ID);
+                myDB.ExecuteNonQuery(cmd);
             }    
-        }  
-        public static void DeleteGenrebyMovieID(string movieID)
+        }
+        public static void DeleteMovie_Genre(string moiveID)
         {
-            myDB.ExecuteNonQuery("DELETE dbo.phanLoaiPhim WHERE idPhim= '" + movieID + "'");
-        }    
-        public static List<Genre> GetListGenreByMovie(string id)
+            myDB.ExecuteNonQuery("DELETE dbo.genrebymovie WHERE idPhim = '" + moiveID + "'");
+        }
+        public static void UpdateMovie_Genre(string moiveID, List<Genre> genrelist)
         {
-            List<Genre> genreList = new List<Genre>();
-            DataTable table = myDB.ExecuteQuery("EXEC getListGenreByMovieID @idPhim", new object[] { id });
-            foreach(DataRow item in table.Rows)
+            myDB.ExecuteNonQuery("DELETE dbo.genrebymovie WHERE idPhim = '" + moiveID + "'");
+              foreach(Genre item in genrelist)
             {
-                Genre genre = new Genre(item);
-                genreList.Add(genre);
-            }
-            return genreList;
+                string cmd = string.Format("INSERT dbo.genrebymoive (idPhim, idTheLoai) VALUES ('{0}', '{1}'", moiveID, item.ID);
+                myDB.ExecuteNonQuery(cmd);
+            }    
         }
     }
 }

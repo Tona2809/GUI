@@ -40,14 +40,14 @@ namespace MovieTheater
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.formatmovieDTV = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ShowBT = new System.Windows.Forms.Button();
             this.DelBT = new System.Windows.Forms.Button();
             this.EditBT = new System.Windows.Forms.Button();
             this.AddBT = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.formatmovieDTV)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +76,7 @@ namespace MovieTheater
             this.mamanhinhCBB.Name = "mamanhinhCBB";
             this.mamanhinhCBB.Size = new System.Drawing.Size(271, 24);
             this.mamanhinhCBB.TabIndex = 10;
+            this.mamanhinhCBB.SelectedIndexChanged += new System.EventHandler(this.mamanhinhCBB_SelectedIndexChanged);
             // 
             // maphimCBB
             // 
@@ -84,12 +85,14 @@ namespace MovieTheater
             this.maphimCBB.Name = "maphimCBB";
             this.maphimCBB.Size = new System.Drawing.Size(271, 24);
             this.maphimCBB.TabIndex = 9;
+            this.maphimCBB.SelectedValueChanged += new System.EventHandler(this.maphimCBB_SelectedValueChanged);
             // 
             // tenmanhinhTB
             // 
             this.tenmanhinhTB.Location = new System.Drawing.Point(152, 300);
             this.tenmanhinhTB.Multiline = true;
             this.tenmanhinhTB.Name = "tenmanhinhTB";
+            this.tenmanhinhTB.ReadOnly = true;
             this.tenmanhinhTB.Size = new System.Drawing.Size(271, 32);
             this.tenmanhinhTB.TabIndex = 8;
             // 
@@ -98,6 +101,7 @@ namespace MovieTheater
             this.tenphimTB.Location = new System.Drawing.Point(152, 184);
             this.tenphimTB.Multiline = true;
             this.tenphimTB.Name = "tenphimTB";
+            this.tenphimTB.ReadOnly = true;
             this.tenphimTB.Size = new System.Drawing.Size(271, 32);
             this.tenphimTB.TabIndex = 6;
             // 
@@ -108,6 +112,7 @@ namespace MovieTheater
             this.madinhdangTB.Name = "madinhdangTB";
             this.madinhdangTB.Size = new System.Drawing.Size(271, 32);
             this.madinhdangTB.TabIndex = 5;
+            this.madinhdangTB.TextChanged += new System.EventHandler(this.madinhdangTB_TextChanged);
             // 
             // label5
             // 
@@ -159,15 +164,17 @@ namespace MovieTheater
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã định dạng:";
             // 
-            // dataGridView1
+            // formatmovieDTV
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(444, 85);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(799, 546);
-            this.dataGridView1.TabIndex = 1;
+            this.formatmovieDTV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.formatmovieDTV.ColumnHeadersHeight = 29;
+            this.formatmovieDTV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.formatmovieDTV.Location = new System.Drawing.Point(444, 85);
+            this.formatmovieDTV.Name = "formatmovieDTV";
+            this.formatmovieDTV.RowHeadersWidth = 51;
+            this.formatmovieDTV.RowTemplate.Height = 24;
+            this.formatmovieDTV.Size = new System.Drawing.Size(799, 546);
+            this.formatmovieDTV.TabIndex = 1;
             // 
             // panel2
             // 
@@ -190,6 +197,7 @@ namespace MovieTheater
             this.ShowBT.TabIndex = 3;
             this.ShowBT.Text = "Show";
             this.ShowBT.UseVisualStyleBackColor = false;
+            this.ShowBT.Click += new System.EventHandler(this.ShowBT_Click);
             // 
             // DelBT
             // 
@@ -200,6 +208,7 @@ namespace MovieTheater
             this.DelBT.TabIndex = 2;
             this.DelBT.Text = "Xóa";
             this.DelBT.UseVisualStyleBackColor = false;
+            this.DelBT.Click += new System.EventHandler(this.DelBT_Click);
             // 
             // EditBT
             // 
@@ -210,6 +219,7 @@ namespace MovieTheater
             this.EditBT.TabIndex = 1;
             this.EditBT.Text = "Sửa";
             this.EditBT.UseVisualStyleBackColor = false;
+            this.EditBT.Click += new System.EventHandler(this.EditBT_Click);
             // 
             // AddBT
             // 
@@ -220,6 +230,7 @@ namespace MovieTheater
             this.AddBT.TabIndex = 0;
             this.AddBT.Text = "Thêm";
             this.AddBT.UseVisualStyleBackColor = false;
+            this.AddBT.Click += new System.EventHandler(this.AddBT_Click);
             // 
             // FormatMovieForm
             // 
@@ -228,14 +239,14 @@ namespace MovieTheater
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1246, 637);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.formatmovieDTV);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormatMovieForm";
             this.Text = "FormatMovieForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.formatmovieDTV)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -244,7 +255,7 @@ namespace MovieTheater
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView formatmovieDTV;
         private System.Windows.Forms.ComboBox mamanhinhCBB;
         private System.Windows.Forms.ComboBox maphimCBB;
         private System.Windows.Forms.TextBox tenmanhinhTB;

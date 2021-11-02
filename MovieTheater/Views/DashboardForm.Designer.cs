@@ -31,9 +31,10 @@ namespace MovieTheater
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.DinhdangBT = new System.Windows.Forms.Button();
+            this.screentypeBT = new System.Windows.Forms.Button();
+            this.phongchieuBT = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.LichchieuBt = new System.Windows.Forms.Button();
-            this.phongchieuBT = new System.Windows.Forms.Button();
             this.theloaiBT = new System.Windows.Forms.Button();
             this.phimBT = new System.Windows.Forms.Button();
             this.pnmain = new System.Windows.Forms.Panel();
@@ -45,9 +46,10 @@ namespace MovieTheater
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.DinhdangBT);
+            this.panel1.Controls.Add(this.screentypeBT);
+            this.panel1.Controls.Add(this.phongchieuBT);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.LichchieuBt);
-            this.panel1.Controls.Add(this.phongchieuBT);
             this.panel1.Controls.Add(this.theloaiBT);
             this.panel1.Controls.Add(this.phimBT);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -61,21 +63,48 @@ namespace MovieTheater
             this.DinhdangBT.BackColor = System.Drawing.Color.Teal;
             this.DinhdangBT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.DinhdangBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DinhdangBT.Location = new System.Drawing.Point(6, 411);
+            this.DinhdangBT.Location = new System.Drawing.Point(3, 337);
             this.DinhdangBT.Name = "DinhdangBT";
             this.DinhdangBT.Size = new System.Drawing.Size(292, 68);
             this.DinhdangBT.TabIndex = 5;
             this.DinhdangBT.Text = "Định dạng";
             this.DinhdangBT.UseVisualStyleBackColor = false;
+            this.DinhdangBT.Click += new System.EventHandler(this.DinhdangBT_Click);
+            // 
+            // screentypeBT
+            // 
+            this.screentypeBT.BackColor = System.Drawing.Color.Teal;
+            this.screentypeBT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.screentypeBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.screentypeBT.Location = new System.Drawing.Point(3, 263);
+            this.screentypeBT.Name = "screentypeBT";
+            this.screentypeBT.Size = new System.Drawing.Size(292, 68);
+            this.screentypeBT.TabIndex = 6;
+            this.screentypeBT.Text = "Màn hình";
+            this.screentypeBT.UseVisualStyleBackColor = false;
+            this.screentypeBT.Click += new System.EventHandler(this.screentypeBT_Click);
+            // 
+            // phongchieuBT
+            // 
+            this.phongchieuBT.BackColor = System.Drawing.Color.Teal;
+            this.phongchieuBT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.phongchieuBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phongchieuBT.Location = new System.Drawing.Point(3, 408);
+            this.phongchieuBT.Name = "phongchieuBT";
+            this.phongchieuBT.Size = new System.Drawing.Size(292, 68);
+            this.phongchieuBT.TabIndex = 2;
+            this.phongchieuBT.Text = "Phòng chiếu";
+            this.phongchieuBT.UseVisualStyleBackColor = false;
+            this.phongchieuBT.Click += new System.EventHandler(this.phongchieuBT_Click);
             // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Teal;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(6, 485);
+            this.button5.Location = new System.Drawing.Point(3, 556);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(292, 68);
+            this.button5.Size = new System.Drawing.Size(295, 68);
             this.button5.TabIndex = 4;
             this.button5.Text = "Vé";
             this.button5.UseVisualStyleBackColor = false;
@@ -85,24 +114,13 @@ namespace MovieTheater
             this.LichchieuBt.BackColor = System.Drawing.Color.Teal;
             this.LichchieuBt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.LichchieuBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LichchieuBt.Location = new System.Drawing.Point(3, 337);
+            this.LichchieuBt.Location = new System.Drawing.Point(3, 482);
             this.LichchieuBt.Name = "LichchieuBt";
             this.LichchieuBt.Size = new System.Drawing.Size(292, 68);
             this.LichchieuBt.TabIndex = 3;
             this.LichchieuBt.Text = "Lich chiếu";
             this.LichchieuBt.UseVisualStyleBackColor = false;
-            // 
-            // phongchieuBT
-            // 
-            this.phongchieuBT.BackColor = System.Drawing.Color.Teal;
-            this.phongchieuBT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.phongchieuBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phongchieuBT.Location = new System.Drawing.Point(3, 263);
-            this.phongchieuBT.Name = "phongchieuBT";
-            this.phongchieuBT.Size = new System.Drawing.Size(292, 68);
-            this.phongchieuBT.TabIndex = 2;
-            this.phongchieuBT.Text = "Phòng chiếu";
-            this.phongchieuBT.UseVisualStyleBackColor = false;
+            this.LichchieuBt.Click += new System.EventHandler(this.LichchieuBt_Click);
             // 
             // theloaiBT
             // 
@@ -163,5 +181,6 @@ namespace MovieTheater
         private System.Windows.Forms.Button phimBT;
         private System.Windows.Forms.Panel pnmain;
         private System.Windows.Forms.Button DinhdangBT;
+        private System.Windows.Forms.Button screentypeBT;
     }
 }

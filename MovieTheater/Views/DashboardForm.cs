@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MovieTheater.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,6 +32,47 @@ namespace MovieTheater
         {
             pnmain.Controls.Clear();
             GenreForm mvf = new GenreForm();
+            mvf.TopLevel = false;
+            pnmain.Controls.Add(mvf);
+            mvf.Dock = DockStyle.Fill;
+            mvf.Show();
+        }
+
+        private void phongchieuBT_Click(object sender, EventArgs e)
+        {
+
+            pnmain.Controls.Clear();
+            RoomForm mvf = new RoomForm();
+            mvf.TopLevel = false;
+            pnmain.Controls.Add(mvf);
+            mvf.Dock = DockStyle.Fill;
+            mvf.Show();
+        }
+
+        private void screentypeBT_Click(object sender, EventArgs e)
+        {
+            pnmain.Controls.Clear();
+            ScreenTypeForm mvf = new ScreenTypeForm();
+            mvf.TopLevel = false;
+            pnmain.Controls.Add(mvf);
+            mvf.Dock = DockStyle.Fill;
+            mvf.Show();
+        }
+
+        private void DinhdangBT_Click(object sender, EventArgs e)
+        {
+            pnmain.Controls.Clear();
+            FormatMovieForm mvf = new FormatMovieForm();
+            mvf.TopLevel = false;
+            pnmain.Controls.Add(mvf);
+            mvf.Dock = DockStyle.Fill;
+            mvf.Show();
+        }
+
+        private void LichchieuBt_Click(object sender, EventArgs e)
+        {
+            pnmain.Controls.Clear();
+            ShowTimeForm mvf = new ShowTimeForm();
             mvf.TopLevel = false;
             pnmain.Controls.Add(mvf);
             mvf.Dock = DockStyle.Fill;

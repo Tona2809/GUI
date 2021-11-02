@@ -26,11 +26,11 @@ namespace MovieTheater
             this.EditBT = new System.Windows.Forms.Button();
             this.addBT = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.motaTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tentlTB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.maTLTB = new System.Windows.Forms.TextBox();
             this.TheloaiIDLB = new System.Windows.Forms.Label();
             this.genreDGV = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
@@ -62,6 +62,7 @@ namespace MovieTheater
             this.ShowBT.TabIndex = 5;
             this.ShowBT.Text = "Show";
             this.ShowBT.UseVisualStyleBackColor = false;
+            this.ShowBT.Click += new System.EventHandler(this.ShowBT_Click);
             // 
             // deleteBT
             // 
@@ -74,6 +75,7 @@ namespace MovieTheater
             this.deleteBT.TabIndex = 4;
             this.deleteBT.Text = "Xóa";
             this.deleteBT.UseVisualStyleBackColor = false;
+            this.deleteBT.Click += new System.EventHandler(this.deleteBT_Click);
             // 
             // EditBT
             // 
@@ -86,6 +88,7 @@ namespace MovieTheater
             this.EditBT.TabIndex = 3;
             this.EditBT.Text = "Sửa";
             this.EditBT.UseVisualStyleBackColor = false;
+            this.EditBT.Click += new System.EventHandler(this.EditBT_Click);
             // 
             // addBT
             // 
@@ -98,28 +101,29 @@ namespace MovieTheater
             this.addBT.TabIndex = 2;
             this.addBT.Text = "Thêm";
             this.addBT.UseVisualStyleBackColor = false;
+            this.addBT.Click += new System.EventHandler(this.addBT_Click);
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.motaTB);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.tentlTB);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.maTLTB);
             this.panel2.Controls.Add(this.TheloaiIDLB);
             this.panel2.Location = new System.Drawing.Point(8, 8);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(452, 267);
             this.panel2.TabIndex = 1;
             // 
-            // textBox3
+            // motaTB
             // 
-            this.textBox3.Location = new System.Drawing.Point(137, 120);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(296, 125);
-            this.textBox3.TabIndex = 5;
+            this.motaTB.Location = new System.Drawing.Point(137, 120);
+            this.motaTB.Multiline = true;
+            this.motaTB.Name = "motaTB";
+            this.motaTB.Size = new System.Drawing.Size(296, 125);
+            this.motaTB.TabIndex = 5;
             // 
             // label2
             // 
@@ -131,13 +135,13 @@ namespace MovieTheater
             this.label2.TabIndex = 4;
             this.label2.Text = "Mô tả:";
             // 
-            // textBox2
+            // tentlTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(137, 63);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(296, 33);
-            this.textBox2.TabIndex = 3;
+            this.tentlTB.Location = new System.Drawing.Point(137, 63);
+            this.tentlTB.Multiline = true;
+            this.tentlTB.Name = "tentlTB";
+            this.tentlTB.Size = new System.Drawing.Size(296, 33);
+            this.tentlTB.TabIndex = 3;
             // 
             // label1
             // 
@@ -149,13 +153,13 @@ namespace MovieTheater
             this.label1.TabIndex = 2;
             this.label1.Text = "Tên thể loại:";
             // 
-            // textBox1
+            // maTLTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(137, 9);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(296, 33);
-            this.textBox1.TabIndex = 1;
+            this.maTLTB.Location = new System.Drawing.Point(137, 9);
+            this.maTLTB.Multiline = true;
+            this.maTLTB.Name = "maTLTB";
+            this.maTLTB.Size = new System.Drawing.Size(296, 33);
+            this.maTLTB.TabIndex = 1;
             // 
             // TheloaiIDLB
             // 
@@ -169,7 +173,9 @@ namespace MovieTheater
             // 
             // genreDGV
             // 
-            this.genreDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.genreDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.genreDGV.ColumnHeadersHeight = 29;
+            this.genreDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.genreDGV.Location = new System.Drawing.Point(476, 4);
             this.genreDGV.Name = "genreDGV";
             this.genreDGV.RowHeadersWidth = 51;
@@ -203,11 +209,11 @@ namespace MovieTheater
         private System.Windows.Forms.Label TheloaiIDLB;
         private System.Windows.Forms.Button addBT;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox motaTB;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tentlTB;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox maTLTB;
         private System.Windows.Forms.Button ShowBT;
         private System.Windows.Forms.Button deleteBT;
         private System.Windows.Forms.Button EditBT;

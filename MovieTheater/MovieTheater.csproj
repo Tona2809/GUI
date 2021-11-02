@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\CinemaDB.cs" />
     <Compile Include="DAO\FormatMovieDB.cs" />
     <Compile Include="DAO\GenreDB.cs" />
     <Compile Include="DAO\MovieByGenreDB.cs" />
@@ -53,6 +54,9 @@
     <Compile Include="DAO\ScreenTypeDB.cs" />
     <Compile Include="DAO\ShowTimeDB.cs" />
     <Compile Include="DAO\StaffDB.cs" />
+    <Compile Include="Model\Cinema.cs" />
+    <Compile Include="Model\FormatMovie.cs" />
+    <Compile Include="Model\ScreenType.cs" />
     <Compile Include="SellerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +64,12 @@
       <DependentUpon>SellerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlConnectionDB.cs" />
+    <Compile Include="Views\ScreenTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ScreenTypeForm.Designer.cs">
+      <DependentUpon>ScreenTypeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\StaffForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +140,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="SellerForm.resx">
       <DependentUpon>SellerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ScreenTypeForm.resx">
+      <DependentUpon>ScreenTypeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\StaffForm.resx">
       <DependentUpon>StaffForm.cs</DependentUpon>

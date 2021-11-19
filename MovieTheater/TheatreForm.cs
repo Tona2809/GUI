@@ -24,12 +24,13 @@ namespace MovieTheater
         float discount = 0;//Tiền được giảm
         float payment = 0;//Tiền phải trả
 
-        ShowTimes Times;
-        Movie Movie;
-        public TheatreForm()
+        ShowTimes Times ;
+        Movie Movie ;
+        public TheatreForm(ShowTimes showTimes, Movie movie)
         {
             InitializeComponent();
-
+            Times = showTimes;
+            Movie = movie;
         }
 
         private void TheatreForm_Load(object sender, EventArgs e)

@@ -33,7 +33,7 @@ namespace MovieTheater
                 timer1.Stop();
                 ShowTimes showTimes = listView1.SelectedItems[0].Tag as ShowTimes;
                 Movie movie = movieCBB.SelectedItem as Movie;
-                TheatreForm frm = new TheatreForm();
+                TheatreForm frm = new TheatreForm(showTimes,movie);
                 this.Hide();
                 frm.ShowDialog();
                 this.OnLoad(null);
@@ -64,6 +64,7 @@ namespace MovieTheater
             {
                 listView1.Items.Clear();
                 FormatMovie format = comboBox2.SelectedItem as FormatMovie;
+                label5.Text = format.ID.ToString();
                 LoadListShowTimeByFilm(format.ID);
             }
         }
@@ -71,6 +72,7 @@ namespace MovieTheater
         {
            
             DataTable data = ShowTimeDB.GetListShowTimeByFormatMovie(formatMovieID, dateTimePicker1.Value);
+            label5.Text = dateTimePicker1.Value.ToString();
             if (data == null) MessageBox.Show("null");
             foreach (DataRow row in data.Rows)
             {

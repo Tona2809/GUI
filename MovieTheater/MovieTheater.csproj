@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Views\AccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AccountForm.Designer.cs">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAO\CinemaDB.cs" />
     <Compile Include="DAO\FormatMovieDB.cs" />
     <Compile Include="DAO\GenreDB.cs" />
@@ -54,9 +60,13 @@
     <Compile Include="DAO\ScreenTypeDB.cs" />
     <Compile Include="DAO\ShowTimeDB.cs" />
     <Compile Include="DAO\StaffDB.cs" />
+    <Compile Include="DAO\TicketDB.cs" />
     <Compile Include="Model\Cinema.cs" />
     <Compile Include="Model\FormatMovie.cs" />
     <Compile Include="Model\ScreenType.cs" />
+    <Compile Include="Model\ShowTimes.cs" />
+    <Compile Include="Model\Staff.cs" />
+    <Compile Include="Model\Ticket.cs" />
     <Compile Include="SellerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +74,12 @@
       <DependentUpon>SellerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlConnectionDB.cs" />
+    <Compile Include="TheatreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheatreForm.Designer.cs">
+      <DependentUpon>TheatreForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ScreenTypeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,10 +92,10 @@
     <Compile Include="Views\StaffForm.Designer.cs">
       <DependentUpon>StaffForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TicketForm.cs">
+    <Compile Include="Views\TicketForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TicketForm.Designer.cs">
+    <Compile Include="Views\TicketForm.Designer.cs">
       <DependentUpon>TicketForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FormatMovieForm.cs">
@@ -138,8 +154,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Views\AccountForm.resx">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SellerForm.resx">
       <DependentUpon>SellerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TheatreForm.resx">
+      <DependentUpon>TheatreForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ScreenTypeForm.resx">
       <DependentUpon>ScreenTypeForm.cs</DependentUpon>
@@ -147,7 +169,7 @@
     <EmbeddedResource Include="Views\StaffForm.resx">
       <DependentUpon>StaffForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TicketForm.resx">
+    <EmbeddedResource Include="Views\TicketForm.resx">
       <DependentUpon>TicketForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormatMovieForm.resx">

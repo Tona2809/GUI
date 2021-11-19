@@ -48,5 +48,6 @@ namespace MovieTheater.Model
             else
                 this.Poster = (byte[])row["apPhich"];
         }
+
     }
 }

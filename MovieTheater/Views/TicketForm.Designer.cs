@@ -30,6 +30,10 @@ namespace MovieTheater
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAllListShowTimes = new System.Windows.Forms.Button();
+            this.btnShowShowTimeNotCreateTickets = new System.Windows.Forms.Button();
+            this.btnShowAllTicketsByShowTime = new System.Windows.Forms.Button();
+            this.btnShowAllTicketsBoughtByShowTime = new System.Windows.Forms.Button();
             this.btnDeleteTicketsByShowTime = new System.Windows.Forms.Button();
             this.btnAddTicketsByShowTime = new System.Windows.Forms.Button();
             this.ticketDGV = new System.Windows.Forms.DataGridView();
@@ -38,10 +42,6 @@ namespace MovieTheater
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnShowAllTicketsBoughtByShowTime = new System.Windows.Forms.Button();
-            this.btnShowAllTicketsByShowTime = new System.Windows.Forms.Button();
-            this.btnShowShowTimeNotCreateTickets = new System.Windows.Forms.Button();
-            this.btnAllListShowTimes = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketDGV)).BeginInit();
             this.SuspendLayout();
@@ -60,6 +60,58 @@ namespace MovieTheater
             this.panel1.Size = new System.Drawing.Size(1238, 56);
             this.panel1.TabIndex = 0;
             // 
+            // btnAllListShowTimes
+            // 
+            this.btnAllListShowTimes.BackColor = System.Drawing.Color.Teal;
+            this.btnAllListShowTimes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAllListShowTimes.Location = new System.Drawing.Point(818, 4);
+            this.btnAllListShowTimes.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAllListShowTimes.Name = "btnAllListShowTimes";
+            this.btnAllListShowTimes.Size = new System.Drawing.Size(154, 46);
+            this.btnAllListShowTimes.TabIndex = 15;
+            this.btnAllListShowTimes.Text = "Xem Tất Cả Lịch Chiếu\r\n";
+            this.btnAllListShowTimes.UseVisualStyleBackColor = false;
+            this.btnAllListShowTimes.Click += new System.EventHandler(this.btnAllListShowTimes_Click);
+            // 
+            // btnShowShowTimeNotCreateTickets
+            // 
+            this.btnShowShowTimeNotCreateTickets.BackColor = System.Drawing.Color.Teal;
+            this.btnShowShowTimeNotCreateTickets.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnShowShowTimeNotCreateTickets.Location = new System.Drawing.Point(656, 4);
+            this.btnShowShowTimeNotCreateTickets.Margin = new System.Windows.Forms.Padding(4);
+            this.btnShowShowTimeNotCreateTickets.Name = "btnShowShowTimeNotCreateTickets";
+            this.btnShowShowTimeNotCreateTickets.Size = new System.Drawing.Size(154, 46);
+            this.btnShowShowTimeNotCreateTickets.TabIndex = 14;
+            this.btnShowShowTimeNotCreateTickets.Text = "Xem Lịch Chiếu Chưa Được Tạo Vé";
+            this.btnShowShowTimeNotCreateTickets.UseVisualStyleBackColor = false;
+            this.btnShowShowTimeNotCreateTickets.Click += new System.EventHandler(this.btnShowShowTimeNotCreateTickets_Click);
+            // 
+            // btnShowAllTicketsByShowTime
+            // 
+            this.btnShowAllTicketsByShowTime.BackColor = System.Drawing.Color.Teal;
+            this.btnShowAllTicketsByShowTime.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnShowAllTicketsByShowTime.Location = new System.Drawing.Point(494, 4);
+            this.btnShowAllTicketsByShowTime.Margin = new System.Windows.Forms.Padding(4);
+            this.btnShowAllTicketsByShowTime.Name = "btnShowAllTicketsByShowTime";
+            this.btnShowAllTicketsByShowTime.Size = new System.Drawing.Size(154, 46);
+            this.btnShowAllTicketsByShowTime.TabIndex = 13;
+            this.btnShowAllTicketsByShowTime.Text = "Xem Tất Cả Các Vé Theo Lịch Chiếu";
+            this.btnShowAllTicketsByShowTime.UseVisualStyleBackColor = false;
+            this.btnShowAllTicketsByShowTime.Click += new System.EventHandler(this.btnShowAllTicketsByShowTime_Click);
+            // 
+            // btnShowAllTicketsBoughtByShowTime
+            // 
+            this.btnShowAllTicketsBoughtByShowTime.BackColor = System.Drawing.Color.Teal;
+            this.btnShowAllTicketsBoughtByShowTime.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnShowAllTicketsBoughtByShowTime.Location = new System.Drawing.Point(332, 4);
+            this.btnShowAllTicketsBoughtByShowTime.Margin = new System.Windows.Forms.Padding(4);
+            this.btnShowAllTicketsBoughtByShowTime.Name = "btnShowAllTicketsBoughtByShowTime";
+            this.btnShowAllTicketsBoughtByShowTime.Size = new System.Drawing.Size(154, 46);
+            this.btnShowAllTicketsBoughtByShowTime.TabIndex = 12;
+            this.btnShowAllTicketsBoughtByShowTime.Text = "Xem Các Vé Được Bán Theo Lịch Chiếu";
+            this.btnShowAllTicketsBoughtByShowTime.UseVisualStyleBackColor = false;
+            this.btnShowAllTicketsBoughtByShowTime.Click += new System.EventHandler(this.btnShowAllTicketsBoughtByShowTime_Click);
+            // 
             // btnDeleteTicketsByShowTime
             // 
             this.btnDeleteTicketsByShowTime.BackColor = System.Drawing.Color.Teal;
@@ -71,6 +123,7 @@ namespace MovieTheater
             this.btnDeleteTicketsByShowTime.TabIndex = 11;
             this.btnDeleteTicketsByShowTime.Text = "Xóa Vé Theo Lịch Chiếu";
             this.btnDeleteTicketsByShowTime.UseVisualStyleBackColor = false;
+            this.btnDeleteTicketsByShowTime.Click += new System.EventHandler(this.btnDeleteTicketsByShowTime_Click);
             // 
             // btnAddTicketsByShowTime
             // 
@@ -83,6 +136,7 @@ namespace MovieTheater
             this.btnAddTicketsByShowTime.TabIndex = 10;
             this.btnAddTicketsByShowTime.Text = "Tự Động Thêm Vé Theo Lịch Chiếu\r\n";
             this.btnAddTicketsByShowTime.UseVisualStyleBackColor = false;
+            this.btnAddTicketsByShowTime.Click += new System.EventHandler(this.btnAddTicketsByShowTime_Click);
             // 
             // ticketDGV
             // 
@@ -128,54 +182,6 @@ namespace MovieTheater
             // 
             this.columnHeader4.Text = "Trạng thái";
             this.columnHeader4.Width = 112;
-            // 
-            // btnShowAllTicketsBoughtByShowTime
-            // 
-            this.btnShowAllTicketsBoughtByShowTime.BackColor = System.Drawing.Color.Teal;
-            this.btnShowAllTicketsBoughtByShowTime.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnShowAllTicketsBoughtByShowTime.Location = new System.Drawing.Point(332, 4);
-            this.btnShowAllTicketsBoughtByShowTime.Margin = new System.Windows.Forms.Padding(4);
-            this.btnShowAllTicketsBoughtByShowTime.Name = "btnShowAllTicketsBoughtByShowTime";
-            this.btnShowAllTicketsBoughtByShowTime.Size = new System.Drawing.Size(154, 46);
-            this.btnShowAllTicketsBoughtByShowTime.TabIndex = 12;
-            this.btnShowAllTicketsBoughtByShowTime.Text = "Xem Các Vé Được Bán Theo Lịch Chiếu";
-            this.btnShowAllTicketsBoughtByShowTime.UseVisualStyleBackColor = false;
-            // 
-            // btnShowAllTicketsByShowTime
-            // 
-            this.btnShowAllTicketsByShowTime.BackColor = System.Drawing.Color.Teal;
-            this.btnShowAllTicketsByShowTime.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnShowAllTicketsByShowTime.Location = new System.Drawing.Point(494, 4);
-            this.btnShowAllTicketsByShowTime.Margin = new System.Windows.Forms.Padding(4);
-            this.btnShowAllTicketsByShowTime.Name = "btnShowAllTicketsByShowTime";
-            this.btnShowAllTicketsByShowTime.Size = new System.Drawing.Size(154, 46);
-            this.btnShowAllTicketsByShowTime.TabIndex = 13;
-            this.btnShowAllTicketsByShowTime.Text = "Xem Tất Cả Các Vé Theo Lịch Chiếu";
-            this.btnShowAllTicketsByShowTime.UseVisualStyleBackColor = false;
-            // 
-            // btnShowShowTimeNotCreateTickets
-            // 
-            this.btnShowShowTimeNotCreateTickets.BackColor = System.Drawing.Color.Teal;
-            this.btnShowShowTimeNotCreateTickets.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnShowShowTimeNotCreateTickets.Location = new System.Drawing.Point(656, 4);
-            this.btnShowShowTimeNotCreateTickets.Margin = new System.Windows.Forms.Padding(4);
-            this.btnShowShowTimeNotCreateTickets.Name = "btnShowShowTimeNotCreateTickets";
-            this.btnShowShowTimeNotCreateTickets.Size = new System.Drawing.Size(154, 46);
-            this.btnShowShowTimeNotCreateTickets.TabIndex = 14;
-            this.btnShowShowTimeNotCreateTickets.Text = "Xem Lịch Chiếu Chưa Được Tạo Vé";
-            this.btnShowShowTimeNotCreateTickets.UseVisualStyleBackColor = false;
-            // 
-            // btnAllListShowTimes
-            // 
-            this.btnAllListShowTimes.BackColor = System.Drawing.Color.Teal;
-            this.btnAllListShowTimes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAllListShowTimes.Location = new System.Drawing.Point(818, 4);
-            this.btnAllListShowTimes.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAllListShowTimes.Name = "btnAllListShowTimes";
-            this.btnAllListShowTimes.Size = new System.Drawing.Size(154, 46);
-            this.btnAllListShowTimes.TabIndex = 15;
-            this.btnAllListShowTimes.Text = "Xem Tất Cả Lịch Chiếu\r\n";
-            this.btnAllListShowTimes.UseVisualStyleBackColor = false;
             // 
             // TicketForm
             // 

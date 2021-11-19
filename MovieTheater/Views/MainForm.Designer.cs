@@ -65,6 +65,7 @@ namespace MovieTheater
             this.AccountBT.TabIndex = 3;
             this.AccountBT.Text = "Tài khoản";
             this.AccountBT.UseVisualStyleBackColor = false;
+            this.AccountBT.Click += new System.EventHandler(this.AccountBT_Click);
             // 
             // DoanhthuBt
             // 
@@ -89,6 +90,7 @@ namespace MovieTheater
             this.TicketBT.TabIndex = 4;
             this.TicketBT.Text = "Bán Vé";
             this.TicketBT.UseVisualStyleBackColor = false;
+            this.TicketBT.Click += new System.EventHandler(this.TicketBT_Click);
             // 
             // NVBT
             // 
@@ -101,6 +103,7 @@ namespace MovieTheater
             this.NVBT.TabIndex = 1;
             this.NVBT.Text = "Nhân viên";
             this.NVBT.UseVisualStyleBackColor = false;
+            this.NVBT.Click += new System.EventHandler(this.NVBT_Click);
             // 
             // DashboardBT
             // 

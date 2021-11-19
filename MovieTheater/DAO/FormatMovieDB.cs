@@ -10,6 +10,22 @@ namespace MovieTheater.DAO
 {
     class FormatMovieDB
     {
+        public static List<FormatMovie> GetListFormatMovieByMovie(string movieID)
+        {
+            List<FormatMovie> listFormat = new List<FormatMovie>();
+            string query = "select d.iD, p.tenPhim, m.tenMH " +
+                "from movie p, formatmovie d, screentype m " +
+                "where p.iD = d.idPhim and d.idLoaiManHinh = m.iD "
+                + "and p.iD = '" + movieID + "'";
+            DataTable data = myDB.ExecuteQuery(query);
+            foreach (DataRow row in data.Rows)
+            {
+                FormatMovie format = new FormatMovie(row);
+                listFormat.Add(format);
+            }
+            return listFormat;
+        }
+
         public static List<FormatMovie> GetFormatMovie()
         {
             List<FormatMovie> formatMovieList = new List<FormatMovie>();

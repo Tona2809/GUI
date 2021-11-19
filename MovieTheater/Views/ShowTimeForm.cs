@@ -77,5 +77,46 @@ namespace MovieTheater
                 cbbcinemaID.DisplayMember = "Name";
             }
         }
+
+        private void EditBt_Click(object sender, EventArgs e)
+        {
+            string showtimeID = malichchieuTB.Text;
+            string cinemaID = ((Cinema)cbbcinemaID.SelectedItem).ID;
+            string formatMovieID = ((FormatMovie)cbbformat.SelectedItem).ID;
+            DateTime time = new DateTime(dtpshowdate.Value.Year, dtpshowdate.Value.Month, dtpshowdate.Value.Day, dtpshowtime.Value.Hour, dtpshowtime.Value.Minute, dtpshowtime.Value.Second);
+            //Bind dtmShowtimeDate to "time.date" and dtmShowtimeTime to "time.time" ... TODO : Look for a better way to do this
+            float ticketPrice = float.Parse(ticketpriceTB.Text);
+            if (ShowTimeDB.UpdateShowtime(showtimeID, cinemaID, formatMovieID, time, ticketPrice))
+            {
+                MessageBox.Show("Sửa lịch chiếu thành công");
+            }
+            else
+            {
+                MessageBox.Show("Sửa lịch chiếu thất bại");
+            }
+            LoadShowtimeList();
+        }
+
+        private void ShowBT_Click(object sender, EventArgs e)
+        {
+            LoadShowtimeList();
+        }
+
+        private void DelBT_Click(object sender, EventArgs e)
+        {
+            string showtimeID = malichchieuTB.Text;
+            if(ShowTimeDB.Deleteshowtime(showtimeID))
+            {
+                MessageBox.Show("Xóa lịch chiếu thành công");
+            }
+            else
+            {
+                MessageBox.Show("Xóa lịch chiếu thất bại");
+            }
+        }
+
+        private void SearchBT_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

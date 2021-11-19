@@ -10,6 +10,12 @@ namespace MovieTheater.DAO
 {
     class CinemaDB
     {
+        public static Cinema GetCinemaByName(string cinemaName)
+        {
+            string query = "select * from dbo.cinema where tenPhong = '" + cinemaName + "'";
+            DataTable data = myDB.ExecuteQuery(query);
+            return new Cinema(data.Rows[0]);
+        }
         public static List<Cinema> GetCinemaByScreenTypeID(string screenTypeID)
         {
             List<Cinema> cinemaList = new List<Cinema>();

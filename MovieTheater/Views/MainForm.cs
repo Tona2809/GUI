@@ -31,5 +31,31 @@ namespace MovieTheater
         {
 
         }
+
+        private void NVBT_Click(object sender, EventArgs e)
+        {
+            pnMain.Controls.Clear();
+            StaffForm mvf = new StaffForm();
+            mvf.TopLevel = false;
+            pnMain.Controls.Add(mvf);
+            mvf.Dock = DockStyle.Fill;
+            mvf.Show();
+        }
+
+        private void AccountBT_Click(object sender, EventArgs e)
+        {
+            pnMain.Controls.Clear();
+            AccountForm mvf = new AccountForm();
+            mvf.TopLevel = false;
+            pnMain.Controls.Add(mvf);
+            mvf.Dock = DockStyle.Fill;
+            mvf.Show();
+        }
+
+        private void TicketBT_Click(object sender, EventArgs e)
+        {
+            SellerForm mf = new SellerForm();
+            mf.Show();
+        }
     }
 }

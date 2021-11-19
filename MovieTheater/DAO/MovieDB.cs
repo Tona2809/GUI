@@ -13,6 +13,17 @@ namespace MovieTheater.DAO
 {
     class MovieDB
     {
+        public static List<Movie> GetListMovieByDate(DateTime date)
+        {
+            List<Movie> listMovie = new List<Movie>();
+            DataTable data = myDB.ExecuteQuery("select * from movie where @Date <= NgayKetThuc", new object[] { date });
+            foreach (DataRow row in data.Rows)
+            {
+                Movie movie = new Movie(row);
+                listMovie.Add(movie);
+            }
+            return listMovie;
+        }
         public static Movie GetMovieByID(string id)
         {
             Movie movie = null;

@@ -78,5 +78,15 @@ namespace MovieTheater
             mvf.Dock = DockStyle.Fill;
             mvf.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            pnmain.Controls.Clear();
+            TicketForm mvf = new TicketForm();
+            mvf.TopLevel = false;
+            pnmain.Controls.Add(mvf);
+            mvf.Dock = DockStyle.Fill;
+            mvf.Show();
+        }
     }
 }

@@ -97,6 +97,7 @@ namespace MovieTheater
             this.ShowBT.TabIndex = 18;
             this.ShowBT.Text = "Show";
             this.ShowBT.UseVisualStyleBackColor = false;
+            this.ShowBT.Click += new System.EventHandler(this.ShowBT_Click);
             // 
             // DelBT
             // 
@@ -108,6 +109,7 @@ namespace MovieTheater
             this.DelBT.TabIndex = 17;
             this.DelBT.Text = "Xóa";
             this.DelBT.UseVisualStyleBackColor = false;
+            this.DelBT.Click += new System.EventHandler(this.DelBT_Click);
             // 
             // EditBt
             // 
@@ -120,6 +122,7 @@ namespace MovieTheater
             this.EditBt.TabIndex = 16;
             this.EditBt.Text = "Sửa";
             this.EditBt.UseVisualStyleBackColor = false;
+            this.EditBt.Click += new System.EventHandler(this.EditBt_Click);
             // 
             // AddBT
             // 
@@ -319,6 +322,7 @@ namespace MovieTheater
             this.SearchBT.TabIndex = 19;
             this.SearchBT.Text = "Seach";
             this.SearchBT.UseVisualStyleBackColor = false;
+            this.SearchBT.Click += new System.EventHandler(this.SearchBT_Click);
             // 
             // saechTB
             // 

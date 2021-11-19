@@ -64,10 +64,16 @@ namespace MovieTheater
                         {
                             MessageBox.Show("Nhan vien ban ve", "Thông báo");
                         }
-                    }else
+                        
+                    }
+                    else
                     {
                         MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng", "Thông báo");
                     }    
+                }
+                else
+                {
+                    MessageBox.Show("Kết nối thất bại", "Thông báo");
                 }    
             }
         }

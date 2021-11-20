@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MovieTheater.Model
 {
-    class ShowTimes
+    public class  ShowTimes
     {
         public string ID { get; set; }
 
@@ -46,5 +46,9 @@ namespace MovieTheater.Model
                 this.TicketPrice = float.Parse(row["giaVe"].ToString());
             this.Status = (int)row["trangThai"];
         }
+        public ShowTimes()
+        {
+
+        }    
     }
 }

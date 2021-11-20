@@ -32,7 +32,6 @@ namespace MovieTheater
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.flpSeat = new System.Windows.Forms.Panel();
             this.picFilm = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -54,11 +53,14 @@ namespace MovieTheater
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblDiscount = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.flpSeat = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFilm)).BeginInit();
             this.panel3.SuspendLayout();
             this.grpLoaiVe.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,7 +71,7 @@ namespace MovieTheater
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1050, 97);
+            this.panel1.Size = new System.Drawing.Size(1354, 97);
             this.panel1.TabIndex = 0;
             // 
             // label2
@@ -92,18 +94,10 @@ namespace MovieTheater
             this.label1.TabIndex = 0;
             this.label1.Text = "Information";
             // 
-            // flpSeat
-            // 
-            this.flpSeat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flpSeat.Location = new System.Drawing.Point(12, 103);
-            this.flpSeat.Name = "flpSeat";
-            this.flpSeat.Size = new System.Drawing.Size(800, 400);
-            this.flpSeat.TabIndex = 1;
-            // 
             // picFilm
             // 
             this.picFilm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picFilm.Location = new System.Drawing.Point(831, 103);
+            this.picFilm.Location = new System.Drawing.Point(13, 17);
             this.picFilm.Name = "picFilm";
             this.picFilm.Size = new System.Drawing.Size(211, 259);
             this.picFilm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -116,9 +110,9 @@ namespace MovieTheater
             this.panel3.Controls.Add(this.button4);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(831, 377);
+            this.panel3.Location = new System.Drawing.Point(13, 282);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(211, 92);
+            this.panel3.Size = new System.Drawing.Size(211, 80);
             this.panel3.TabIndex = 9;
             // 
             // button1
@@ -153,7 +147,7 @@ namespace MovieTheater
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(69, 16);
+            this.label4.Location = new System.Drawing.Point(69, 23);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 17);
             this.label4.TabIndex = 5;
@@ -166,9 +160,9 @@ namespace MovieTheater
             this.grpLoaiVe.Controls.Add(this.lblTicketPrice);
             this.grpLoaiVe.Controls.Add(this.rdoAdult);
             this.grpLoaiVe.Controls.Add(this.rdoChild);
-            this.grpLoaiVe.Location = new System.Drawing.Point(518, 507);
+            this.grpLoaiVe.Location = new System.Drawing.Point(544, 559);
             this.grpLoaiVe.Name = "grpLoaiVe";
-            this.grpLoaiVe.Size = new System.Drawing.Size(524, 200);
+            this.grpLoaiVe.Size = new System.Drawing.Size(537, 198);
             this.grpLoaiVe.TabIndex = 18;
             this.grpLoaiVe.TabStop = false;
             this.grpLoaiVe.Text = "Loại Vé:";
@@ -176,7 +170,7 @@ namespace MovieTheater
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 136);
+            this.label12.Location = new System.Drawing.Point(25, 139);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(55, 17);
             this.label12.TabIndex = 10;
@@ -201,7 +195,7 @@ namespace MovieTheater
             this.lblTicketPrice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblTicketPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTicketPrice.ForeColor = System.Drawing.Color.Red;
-            this.lblTicketPrice.Location = new System.Drawing.Point(67, 123);
+            this.lblTicketPrice.Location = new System.Drawing.Point(90, 142);
             this.lblTicketPrice.Name = "lblTicketPrice";
             this.lblTicketPrice.Size = new System.Drawing.Size(247, 30);
             this.lblTicketPrice.TabIndex = 9;
@@ -242,7 +236,7 @@ namespace MovieTheater
             this.panel6.Controls.Add(this.label8);
             this.panel6.Controls.Add(this.label9);
             this.panel6.Controls.Add(this.lblDiscount);
-            this.panel6.Location = new System.Drawing.Point(12, 509);
+            this.panel6.Location = new System.Drawing.Point(16, 559);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(500, 198);
             this.panel6.TabIndex = 15;
@@ -339,17 +333,32 @@ namespace MovieTheater
             this.lblDiscount.TabIndex = 10;
             this.lblDiscount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.picFilm);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Location = new System.Drawing.Point(1096, 103);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(236, 384);
+            this.panel2.TabIndex = 0;
+            // 
+            // flpSeat
+            // 
+            this.flpSeat.Location = new System.Drawing.Point(16, 103);
+            this.flpSeat.Name = "flpSeat";
+            this.flpSeat.Size = new System.Drawing.Size(1065, 450);
+            this.flpSeat.TabIndex = 19;
+            // 
             // TheatreForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1050, 710);
+            this.ClientSize = new System.Drawing.Size(1354, 769);
+            this.Controls.Add(this.flpSeat);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.grpLoaiVe);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.picFilm);
-            this.Controls.Add(this.flpSeat);
             this.Controls.Add(this.panel1);
             this.Name = "TheatreForm";
             this.Text = "TheatreForm";
@@ -363,6 +372,7 @@ namespace MovieTheater
             this.grpLoaiVe.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -393,6 +403,7 @@ namespace MovieTheater
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblDiscount;
-        public System.Windows.Forms.Panel flpSeat;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.FlowLayoutPanel flpSeat;
     }
 }

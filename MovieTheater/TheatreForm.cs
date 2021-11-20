@@ -24,8 +24,8 @@ namespace MovieTheater
         float discount = 0;//Tiền được giảm
         float payment = 0;//Tiền phải trả
 
-        ShowTimes Times ;
-        Movie Movie ;
+        ShowTimes Times = new ShowTimes() ;
+        Movie Movie = new Movie();
         public TheatreForm(ShowTimes showTimes, Movie movie)
         {
             InitializeComponent();
@@ -44,22 +44,20 @@ namespace MovieTheater
                 + Times.Time.AddMinutes(Movie.Time).ToShortTimeString();
             if (Movie.Poster != null)
                 picFilm.Image = MovieDB.bytetoimage(Movie.Poster);
-
             rdoAdult.Checked = true;
             grpLoaiVe.Enabled = false;
-
             LoadDataCinema(Times.CinemaName);
 
             listSeat = TicketDB.GetListTicketsByShowTimes(Times.ID);
-
             LoadSeats(listSeat);
         }
         private void LoadSeats(List<Ticket> list)
         {
-            flpSeat.Controls.Clear();
+            flpSeat.Controls.Clear();         
             for (int i = 0; i < list.Count; i++)
             {
-                Button btnSeat = new Button() { Width = SIZE + 20, Height = SIZE };
+                Button btnSeat = new Button() 
+                { Width = SIZE + 20, Height = SIZE };
                 btnSeat.Text = list[i].SeatName;
                 if (list[i].Status == 1)
                     btnSeat.BackColor = Color.Red;
@@ -67,8 +65,8 @@ namespace MovieTheater
                     btnSeat.BackColor = Color.White;
                 btnSeat.Click += BtnSeat_Click;
                 flpSeat.Controls.Add(btnSeat);
-
                 btnSeat.Tag = list[i];
+            
             }
         }
         private void BtnSeat_Click(object sender, EventArgs e)
@@ -78,10 +76,8 @@ namespace MovieTheater
             {
                 grpLoaiVe.Enabled = true;
                 rdoAdult.Checked = true;
-
                 btnSeat.BackColor = Color.Yellow;
                 Ticket ticket = btnSeat.Tag as Ticket;
-
                 ticket.Price = ticketPrice;
                 displayPrice = ticket.Price;
                 total += ticketPrice;
@@ -94,7 +90,6 @@ namespace MovieTheater
             {
                 btnSeat.BackColor = Color.White;
                 Ticket ticket = btnSeat.Tag as Ticket;
-
                 total -= ticket.Price;
                 payment = total - discount;
                 ticket.Price = 0;
@@ -238,7 +233,7 @@ namespace MovieTheater
                 Ticket ticket = listSeatSelected[listSeatSelected.Count - 1].Tag as Ticket;
                 ticket.Type = 3;
 
-                float oldPrice = ticket.Price;
+                float oldPrice = ticket.Price; 
                 ticket.Price = 0.7f * ticketPrice;
                 displayPrice = ticket.Price;
                 total = total + ticket.Price - oldPrice;
@@ -246,6 +241,11 @@ namespace MovieTheater
 
                 LoadBill();
             }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MovieTheater.Model
 {
-    class Movie
+    public class Movie
     {
         public string ID { get; set; }
         public string Name { get; set; }
@@ -31,6 +31,10 @@ namespace MovieTheater.Model
             this.Director = director;
             this.YearProduction = year;
             this.Poster = poster;
+        }
+        public Movie()
+        {
+
         }
         public Movie(DataRow row)
         {

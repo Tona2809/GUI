@@ -51,6 +51,9 @@ namespace MovieTheater
             if (AccountDB.InsertAccount(username, accountType, staffID))
             {
                 MessageBox.Show("Thêm tài khoản thành công, mật khẩu mặc định : 123456");
+                string password = "123456";
+                AccountDB.InsertAccountSQL(username, password, accountType);
+                
             }
             else
             {
@@ -66,6 +69,7 @@ namespace MovieTheater
             int accountType = (int)loaitkNBR.Value;
             if (AccountDB.UpdateAccount(username, accountType))
             {
+                AccountDB.UpdateAccountRole(username, accountType);
                 MessageBox.Show("Sửa tài khoản thành công");
             }
             else
@@ -94,6 +98,7 @@ namespace MovieTheater
             if(AccountDB.DeleteAccount(username))
             {
                 MessageBox.Show("Xóa tài khoản thành công");
+                AccountDB.DeleteAccountsql(username);
             }
             else
             {

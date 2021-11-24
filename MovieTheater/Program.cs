@@ -18,5 +18,15 @@ namespace MovieTheater
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new formLogin());
         }
+        
+    }
+    public static class Globals
+    {
+        public static string Globalusn { get; set; }
+        public static void setglobalusn(string newusn)
+        {
+            Globalusn = newusn;
+        }
+        
     }
 }

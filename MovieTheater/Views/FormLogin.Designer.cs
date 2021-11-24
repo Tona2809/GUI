@@ -50,6 +50,7 @@ namespace MovieTheater
             this.PasswordTB.Location = new System.Drawing.Point(358, 131);
             this.PasswordTB.Multiline = true;
             this.PasswordTB.Name = "PasswordTB";
+            this.PasswordTB.PasswordChar = '*';
             this.PasswordTB.Size = new System.Drawing.Size(311, 41);
             this.PasswordTB.TabIndex = 4;
             // 
@@ -169,8 +170,9 @@ namespace MovieTheater
             this.forgetPassBT.Name = "forgetPassBT";
             this.forgetPassBT.Size = new System.Drawing.Size(305, 50);
             this.forgetPassBT.TabIndex = 15;
-            this.forgetPassBT.Text = "Quên mật khẩu";
+            this.forgetPassBT.Text = "RESET MẬT KHẨU";
             this.forgetPassBT.UseVisualStyleBackColor = false;
+            this.forgetPassBT.Click += new System.EventHandler(this.forgetPassBT_Click);
             // 
             // formLogin
             // 

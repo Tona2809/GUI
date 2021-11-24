@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MovieTheater.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,21 @@ namespace MovieTheater
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        public MainForm(Account acc)
         {
             InitializeComponent();
+            this.LoginAccount = acc;
+        }
+        private Account loginAccount;
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value; ChangeAccount(loginAccount.Type); }
+        }
+        void ChangeAccount(int type)
+        {
+            if (loginAccount.Type == 1 || loginAccount.Type == 2)
+            lblAccountInfo.Text += LoginAccount.Username;
         }
 
         private void DashboardBT_Click(object sender, EventArgs e)
@@ -56,6 +69,24 @@ namespace MovieTheater
         {
             SellerForm mf = new SellerForm();
             mf.Show();
+        }
+
+        private void DoanhthuBt_Click(object sender, EventArgs e)
+        {
+            pnMain.Controls.Clear();
+            RevenueForm mvf = new RevenueForm();
+            mvf.TopLevel = false;
+            pnMain.Controls.Add(mvf);
+            mvf.Dock = DockStyle.Fill;
+            mvf.Show();
+        }
+
+        private void changePWBT_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UpdatePassWordForm frm = new UpdatePassWordForm(loginAccount);
+            frm.ShowDialog();
+            this.Show();
         }
     }
 }

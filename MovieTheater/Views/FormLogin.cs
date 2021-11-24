@@ -21,6 +21,7 @@ namespace MovieTheater
 
         private void formLogin_Load(object sender, EventArgs e)
         {
+            cbbsqlconnect.Items.Add(@"(LocalDB)\MSSQLLocalDB");
             cbbsqlconnect.Items.Add(@"LAPTOP-T093R9G6\SQLEXPRESS");
         }
         public static string DataSource;
@@ -52,17 +53,23 @@ namespace MovieTheater
                     if(result == 1)
                     {
                         MessageBox.Show("Đăng nhập thành công", "Thông báo");
+                        Globals.setglobalusn(UsernameTB.Text);
                         Account account = AccountDB.GetAccount(UsernameTB.Text);
+                        
                         if(account.Type == 1)    
                         {
                             this.Hide();
-                            MainForm mf = new MainForm();
+                            MainForm mf = new MainForm(account);
                             mf.ShowDialog();
                             this.Show();                          
                         }   
                         else
                         {
                             MessageBox.Show("Nhan vien ban ve", "Thông báo");
+                            this.Hide();
+                            MainForm mf = new MainForm(account);
+                            mf.ShowDialog();
+                            this.Show();
                         }
                         
                     }
@@ -80,6 +87,14 @@ namespace MovieTheater
         private int Login(string username, string passoword)
         {
             return AccountDB.Login(username, passoword);
+        }
+
+        private void forgetPassBT_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ResetPasswordForm mf = new ResetPasswordForm();
+            mf.ShowDialog();
+            this.Show();
         }
     }
 }

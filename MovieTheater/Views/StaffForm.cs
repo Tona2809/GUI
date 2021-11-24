@@ -63,6 +63,7 @@ namespace MovieTheater
             string staffId = maNVTB.Text;
             string staffName = tenNVTB.Text;
             DateTime staffBirth = DateTime.Parse(ngaysinhDTP.Text);
+            MessageBox.Show(staffBirth.ToString());
             string staffAddress = diachiTB.Text;
             string staffPhone = SDTTB.Text;
             int staffINumber = Int32.Parse(CMNDTB.Text);

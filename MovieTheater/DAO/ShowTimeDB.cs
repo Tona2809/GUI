@@ -12,13 +12,13 @@ namespace MovieTheater.DAO
     {
         public static DataTable GetListShowTimeByFormatMovie(string formatMovieID, DateTime date)
         {
-            string query = "laylichchieutheoformat @ID , @Date";
+            string query = "exec laylichchieutheoformat @ID , @Date";
             return myDB.ExecuteQuery(query, new object[] { formatMovieID, date });
         }
         public static List<ShowTimes> GetListShowTimesNotCreateTickets()
         {
             List<ShowTimes> listShowTimes = new List<ShowTimes>();
-            DataTable data = myDB.ExecuteQuery("laylichchieuchuataove");
+            DataTable data = myDB.ExecuteQuery("exec laylichchieuchuataove");
             foreach (DataRow row in data.Rows)
             {
                 ShowTimes showTimes = new ShowTimes(row);
@@ -28,7 +28,7 @@ namespace MovieTheater.DAO
         }
         public static int UpdateStatusShowTimes(string showTimesID, int status)
         {
-            string query = "updatestatuslichchieu @idLichChieu , @status";
+            string query = "exec updatestatuslichchieu @idLichChieu , @status";
             return myDB.ExecuteNonQuery(query, new object[] { showTimesID, status });
         }
         public static DataTable GetListShowtime()
@@ -38,7 +38,7 @@ namespace MovieTheater.DAO
         public static List<ShowTimes> GetAllListShowTimes()
         {
             List<ShowTimes> listShowTimes = new List<ShowTimes>();
-            DataTable data = myDB.ExecuteQuery("getalllistshowtime");
+            DataTable data = myDB.ExecuteQuery("exec getalllistshowtime");
             foreach (DataRow row in data.Rows)
             {
                 ShowTimes showTimes = new ShowTimes(row);
@@ -53,7 +53,7 @@ namespace MovieTheater.DAO
         }
         public static bool UpdateShowtime(string id, string cinemaID, string formatMovie, DateTime time, float ticketPrice)
         {
-            string cmd = string.Format("updateshowtime @id , @idphong , @iddinhdang , @thoigianchieu , @giave ");
+            string cmd = string.Format("exec updateshowtime @id , @idphong , @iddinhdang , @thoigianchieu , @giave ");
             int result = myDB.ExecuteNonQuery(cmd, new object[] { id, cinemaID, formatMovie, time, ticketPrice });
             return result > 0;
         }

@@ -52,12 +52,12 @@ namespace MovieTheater.DAO
         }
         public static int InsertTicketByShowTimes(string showTimesID, string seatName)
         {
-            string query = "themve @idlichChieu , @maGheNgoi ";
+            string query = "exec themve @idlichChieu , @maGheNgoi ";
             return myDB.ExecuteNonQuery(query, new object[] { showTimesID, seatName });
         }
         public static int DeleteTicketsByShowTimes(string showTimesID)
         {
-            string query = "Deleteve @idlichChieu";
+            string query = "exec Deleteve @idlichChieu";
             return myDB.ExecuteNonQuery(query, new object[] { showTimesID });
         }
     }

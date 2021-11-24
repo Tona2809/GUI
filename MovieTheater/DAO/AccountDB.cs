@@ -10,14 +10,27 @@ namespace MovieTheater.DAO
 {
     class AccountDB
     {
+        public static bool UpdatePasswordForAccount(string userName, string passWord, string newPassWord)
+        {
+
+
+            int result = myDB.ExecuteNonQueryforlogin("EXEC updatepassword @username , @pass , @newPass", new object[] { userName, passWord, newPassWord });
+
+            return result > 0;
+        }
         public static DataTable SearchAccountByStaffName(string name)
         {
             return myDB.ExecuteQuery("EXEC SearchAccount @hoten ", new object[] { name });
         }
+        public static bool ResetPassword(string username)
+        {
+            int result = myDB.ExecuteNonQueryforlogin("resetpassword @username", new object[] { username });
+            return result > 0;
+        }
         public static int Login(string username, string password)
         {
             string query = "CheckLog_in @userName ,  @passWord";
-            DataTable table = myDB.ExecuteQuery(query, new object[] { username, password });
+            DataTable table = myDB.ExecuteQueryforlogin(query, new object[] { username, password });
             if (table == null)
                 return -1;
             else if (table.Rows.Count > 0)
@@ -30,9 +43,13 @@ namespace MovieTheater.DAO
             int result = myDB.ExecuteNonQuery("EXEC updatetaikhoan @username , @loaiTK ", new object[] { username, accountType });
             return result > 0;
         }
+        public static void UpdateAccountRole(string username, int accountType)
+        {
+             myDB.ExecuteQueryforlogin("EXEC rolechange @username , @loaiTK ", new object[] { username, accountType });
+        }
         public static DataTable GetAccountList()
         {
-            return myDB.ExecuteQuery("laydsaccount");
+            return myDB.ExecuteQuery("exec laydsaccount");
         }
         public static Account GetAccount(string username)
         {
@@ -49,10 +66,19 @@ namespace MovieTheater.DAO
             int result = myDB.ExecuteNonQuery("EXEC themtaikhoan @username , @loaiTK , @idNV ", new object[] { username, accountype, staffID });
             return result > 0;
         }
+        public static void InsertAccountSQL(string username,string password, int accountype)
+        {
+            myDB.ExecuteQueryforlogin("EXEC createuserinsql @username , @loaiTK , @idNV ", new object[] { username, password, accountype });
+        }
         public static bool DeleteAccount(string username)
         {
-            int result = myDB.ExecuteNonQuery("DELETE dbo.account WHERE userName= '" + username + "'");
+            int result = myDB.ExecuteNonQuery("DELETE dbo.account WHERE userName= '" + username + "' ");
             return result > 0;
+        }
+        public static void DeleteAccountsql(string username)
+        {
+           myDB.ExecuteQueryforlogin("drop login " + username + " drop user if exists "+username);
+            
         }
     }
 }

@@ -36,6 +36,8 @@ namespace MovieTheater
             this.NVBT = new System.Windows.Forms.Button();
             this.DashboardBT = new System.Windows.Forms.Button();
             this.pnMain = new System.Windows.Forms.Panel();
+            this.changePWBT = new System.Windows.Forms.Button();
+            this.lblAccountInfo = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,6 +45,8 @@ namespace MovieTheater
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.lblAccountInfo);
+            this.panel2.Controls.Add(this.changePWBT);
             this.panel2.Controls.Add(this.AccountBT);
             this.panel2.Controls.Add(this.DoanhthuBt);
             this.panel2.Controls.Add(this.TicketBT);
@@ -59,7 +63,7 @@ namespace MovieTheater
             this.AccountBT.BackColor = System.Drawing.Color.Teal;
             this.AccountBT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AccountBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AccountBT.Location = new System.Drawing.Point(663, 11);
+            this.AccountBT.Location = new System.Drawing.Point(715, 11);
             this.AccountBT.Name = "AccountBT";
             this.AccountBT.Size = new System.Drawing.Size(155, 76);
             this.AccountBT.TabIndex = 3;
@@ -72,19 +76,20 @@ namespace MovieTheater
             this.DoanhthuBt.BackColor = System.Drawing.Color.Teal;
             this.DoanhthuBt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.DoanhthuBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DoanhthuBt.Location = new System.Drawing.Point(1197, 11);
+            this.DoanhthuBt.Location = new System.Drawing.Point(1157, 11);
             this.DoanhthuBt.Name = "DoanhthuBt";
             this.DoanhthuBt.Size = new System.Drawing.Size(164, 76);
             this.DoanhthuBt.TabIndex = 5;
             this.DoanhthuBt.Text = "Doanh Thu";
             this.DoanhthuBt.UseVisualStyleBackColor = false;
+            this.DoanhthuBt.Click += new System.EventHandler(this.DoanhthuBt_Click);
             // 
             // TicketBT
             // 
             this.TicketBT.BackColor = System.Drawing.Color.Teal;
             this.TicketBT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.TicketBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TicketBT.Location = new System.Drawing.Point(928, 10);
+            this.TicketBT.Location = new System.Drawing.Point(935, 11);
             this.TicketBT.Name = "TicketBT";
             this.TicketBT.Size = new System.Drawing.Size(164, 76);
             this.TicketBT.TabIndex = 4;
@@ -97,7 +102,7 @@ namespace MovieTheater
             this.NVBT.BackColor = System.Drawing.Color.Teal;
             this.NVBT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.NVBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NVBT.Location = new System.Drawing.Point(400, 10);
+            this.NVBT.Location = new System.Drawing.Point(496, 12);
             this.NVBT.Name = "NVBT";
             this.NVBT.Size = new System.Drawing.Size(155, 77);
             this.NVBT.TabIndex = 1;
@@ -110,7 +115,7 @@ namespace MovieTheater
             this.DashboardBT.BackColor = System.Drawing.Color.Teal;
             this.DashboardBT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.DashboardBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashboardBT.Location = new System.Drawing.Point(141, 12);
+            this.DashboardBT.Location = new System.Drawing.Point(272, 11);
             this.DashboardBT.Name = "DashboardBT";
             this.DashboardBT.Size = new System.Drawing.Size(155, 76);
             this.DashboardBT.TabIndex = 0;
@@ -127,6 +132,26 @@ namespace MovieTheater
             this.pnMain.TabIndex = 1;
             this.pnMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnMain_Paint);
             // 
+            // changePWBT
+            // 
+            this.changePWBT.BackColor = System.Drawing.Color.Teal;
+            this.changePWBT.Location = new System.Drawing.Point(1448, -1);
+            this.changePWBT.Name = "changePWBT";
+            this.changePWBT.Size = new System.Drawing.Size(98, 33);
+            this.changePWBT.TabIndex = 17;
+            this.changePWBT.Text = "changePW";
+            this.changePWBT.UseVisualStyleBackColor = false;
+            this.changePWBT.Click += new System.EventHandler(this.changePWBT_Click);
+            // 
+            // lblAccountInfo
+            // 
+            this.lblAccountInfo.AutoSize = true;
+            this.lblAccountInfo.Location = new System.Drawing.Point(3, 7);
+            this.lblAccountInfo.Name = "lblAccountInfo";
+            this.lblAccountInfo.Size = new System.Drawing.Size(107, 17);
+            this.lblAccountInfo.TabIndex = 18;
+            this.lblAccountInfo.Text = "Tên tài khoản : ";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -138,6 +163,7 @@ namespace MovieTheater
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -150,5 +176,7 @@ namespace MovieTheater
         private System.Windows.Forms.Button NVBT;
         private System.Windows.Forms.Button DashboardBT;
         private System.Windows.Forms.Panel pnMain;
+        private System.Windows.Forms.Button changePWBT;
+        private System.Windows.Forms.Label lblAccountInfo;
     }
 }

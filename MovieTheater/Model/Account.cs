@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MovieTheater.DTO
 {
-    class Account
+    public class Account
     {
         public string Username { get; set; }
         public string StaffID { get; set; }
@@ -20,6 +20,10 @@ namespace MovieTheater.DTO
             this.Password = password;
             this.Type = type;
             this.StaffID = staffID;
+        }
+        public Account ()
+        {
+
         }
         public Account(DataRow row)
         {

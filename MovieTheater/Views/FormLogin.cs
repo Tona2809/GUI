@@ -55,7 +55,7 @@ namespace MovieTheater
                         MessageBox.Show("Đăng nhập thành công", "Thông báo");
                         Globals.setglobalusn(UsernameTB.Text);
                         Account account = AccountDB.GetAccount(UsernameTB.Text);
-                        
+                        Globals.setglobaltypeusn(account.Type);
                         if(account.Type == 1)    
                         {
                             this.Hide();

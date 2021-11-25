@@ -47,22 +47,38 @@ namespace MovieTheater
 
         private void NVBT_Click(object sender, EventArgs e)
         {
-            pnMain.Controls.Clear();
-            StaffForm mvf = new StaffForm();
-            mvf.TopLevel = false;
-            pnMain.Controls.Add(mvf);
-            mvf.Dock = DockStyle.Fill;
-            mvf.Show();
+            if (Globals.Globaltypeusn == 2)
+            {
+                NVBT.Enabled = false;
+                MessageBox.Show("Bạn không có quyền truy cập", "Thông báo");
+            }
+            else
+            {
+                pnMain.Controls.Clear();
+                StaffForm mvf = new StaffForm();
+                mvf.TopLevel = false;
+                pnMain.Controls.Add(mvf);
+                mvf.Dock = DockStyle.Fill;
+                mvf.Show();
+            }
         }
 
         private void AccountBT_Click(object sender, EventArgs e)
         {
-            pnMain.Controls.Clear();
-            AccountForm mvf = new AccountForm();
-            mvf.TopLevel = false;
-            pnMain.Controls.Add(mvf);
-            mvf.Dock = DockStyle.Fill;
-            mvf.Show();
+            if (Globals.Globaltypeusn == 2)
+            {
+                NVBT.Enabled = false;
+                MessageBox.Show("Bạn không có quyền truy cập", "Thông báo");
+            }
+            else
+            {
+                pnMain.Controls.Clear();
+                AccountForm mvf = new AccountForm();
+                mvf.TopLevel = false;
+                pnMain.Controls.Add(mvf);
+                mvf.Dock = DockStyle.Fill;
+                mvf.Show();
+            }
         }
 
         private void TicketBT_Click(object sender, EventArgs e)
@@ -73,12 +89,20 @@ namespace MovieTheater
 
         private void DoanhthuBt_Click(object sender, EventArgs e)
         {
-            pnMain.Controls.Clear();
-            RevenueForm mvf = new RevenueForm();
-            mvf.TopLevel = false;
-            pnMain.Controls.Add(mvf);
-            mvf.Dock = DockStyle.Fill;
-            mvf.Show();
+            if (Globals.Globaltypeusn == 2)
+            {
+                NVBT.Enabled = false;
+                MessageBox.Show("Bạn không có quyền truy cập", "Thông báo");
+            }
+            else
+            {
+                pnMain.Controls.Clear();
+                RevenueForm mvf = new RevenueForm();
+                mvf.TopLevel = false;
+                pnMain.Controls.Add(mvf);
+                mvf.Dock = DockStyle.Fill;
+                mvf.Show();
+            }
         }
 
         private void changePWBT_Click(object sender, EventArgs e)

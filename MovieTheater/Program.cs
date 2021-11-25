@@ -23,6 +23,11 @@ namespace MovieTheater
     public static class Globals
     {
         public static string Globalusn { get; set; }
+        public static int Globaltypeusn { get; set; }
+        public static void setglobaltypeusn (int type)
+        {
+            Globaltypeusn = type;
+        }
         public static void setglobalusn(string newusn)
         {
             Globalusn = newusn;

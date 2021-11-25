@@ -65,7 +65,6 @@ namespace MovieTheater
         private void EDITBT_Click(object sender, EventArgs e)
         {
             string username = UsernameTB.Text;
-            MessageBox.Show(username);
             int accountType = (int)loaitkNBR.Value;
             if (AccountDB.UpdateAccount(username, accountType))
             {

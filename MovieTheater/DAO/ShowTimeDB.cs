@@ -15,6 +15,11 @@ namespace MovieTheater.DAO
             string query = "exec laylichchieutheoformat @ID , @Date";
             return myDB.ExecuteQuery(query, new object[] { formatMovieID, date });
         }
+        public static DataTable SearchShowtimeByMovieName(string movieName)
+        {
+            DataTable data = myDB.ExecuteQuery("EXEC SearchShowTimeByMovieName @tenPhim ", new object[] { movieName });
+            return data;
+        }
         public static List<ShowTimes> GetListShowTimesNotCreateTickets()
         {
             List<ShowTimes> listShowTimes = new List<ShowTimes>();

@@ -316,9 +316,9 @@ namespace MovieTheater
             // 
             this.SearchBT.BackColor = System.Drawing.Color.Teal;
             this.SearchBT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SearchBT.Location = new System.Drawing.Point(699, 11);
+            this.SearchBT.Location = new System.Drawing.Point(710, 7);
             this.SearchBT.Name = "SearchBT";
-            this.SearchBT.Size = new System.Drawing.Size(104, 27);
+            this.SearchBT.Size = new System.Drawing.Size(104, 34);
             this.SearchBT.TabIndex = 19;
             this.SearchBT.Text = "Seach";
             this.SearchBT.UseVisualStyleBackColor = false;

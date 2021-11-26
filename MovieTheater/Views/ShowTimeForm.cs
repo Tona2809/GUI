@@ -117,6 +117,8 @@ namespace MovieTheater
 
         private void SearchBT_Click(object sender, EventArgs e)
         {
+            string movieName = saechTB.Text;
+            showtimeList.DataSource = ShowTimeDB.SearchShowtimeByMovieName(movieName);
         }
     }
 }
